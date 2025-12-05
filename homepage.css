@@ -1,0 +1,480 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-position: fixed;
+    font-family: 'Poppins', sans-serif;
+    user-select: none; 
+   
+}
+/*css for drop down delivery options*/
+.deliverycontainer{
+    background-color:#1ea117 ;
+    height: 35px;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.deliverypicks{
+    background: #0e510b;
+    border: none;
+}
+
+.maindropdown{
+    overflow-y: scroll;
+    height: auto;
+}
+/*above content of nav bar*/
+.calls{
+    margin-top: -30px;
+    margin-left: 80%;
+    color: aliceblue;
+}
+.homebutton{
+    height: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size:15px;;
+    color: aliceblue;
+   
+}
+.slash{
+        font-size: 20px;
+      color: aliceblue;
+}
+.downarrowicon{
+    font-weight:bolder;
+    font-style: bold;
+}
+@media screen and (max-width: 600px)
+ {
+.phonenum{
+    display: none;
+    margin-left: 20%;
+    
+}
+.navigationbarforlab{
+    display:none;
+       overflow-x: hidden;
+}
+.bx-caret-big-down{
+ display: none;
+}
+.calls{
+    margin-right: 30%;
+}
+}
+.toglebutton {
+    border: none;
+}
+.bx-caret-big-down:hover{
+    color: black;
+}
+/*navbar cart icon */
+.carticon{
+    font-size: 40px;
+}
+.mobilenavbar{
+    background-color: #00a651;
+}
+/*navbar for mobile*/
+#mobileMenu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      height: 100vh;
+      width: 260px;
+      background: #fff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    #mobileMenu.active {
+      left: 0;
+    }
+
+    /* Submenu */
+    .categoryMenu {
+      display: none;
+    }
+
+    .back-btn {
+      cursor: pointer;
+      font-weight: bold;
+      padding-bottom: 10px;
+      display: block;
+    }
+
+    .close-btn {
+      font-size: 22px;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+
+/**/
+.quantity{
+    height: 10px;
+    width: 20px;
+    background-color:red;
+    padding-top: 0px;
+    padding-bottom:24px;
+    padding-left: 6px;
+    padding-right: 5px;
+    border-radius: 50%;
+    margin-left: -17px;
+    margin-top: -2px;
+    color: #fff;
+}
+.hovergreen a{
+        font-weight:bolder;
+    font-style: bold;
+    color: black;
+}
+
+.hovergreen a:hover
+{
+    color: #00a651;
+     font-weight:bolder;
+    font-style: bold;
+}
+.hover-box {
+  display: none;
+  background:#fff ;
+  border: 2px solid #f4f3f3;
+  padding: 15px;
+  width: 300px;
+  height: 600px;
+  position: absolute;
+  left: 265px;   /* distance from dropdown */
+  top: 0;
+  border-radius: 10px;
+  margin-top: 37px;
+  box-shadow: 1px 1px 1px 1px rgb(180, 178, 178);
+}
+.dropdowingitems{
+    height: 600px;
+    overflow-y: scroll;
+    width: 260px;  
+}
+.navigationbarforlab{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px 1px rgb(180, 178, 178);
+    position: static;
+}
+/* search bar css*/
+ .search-box {
+      background: #f0f0f0;
+      border-radius: 50px;
+      height: 40px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 700px; /* You can change this */
+      margin: auto;
+      margin-right: 350px;
+    }
+    .search-icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .search-input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      font-size: 15px;
+    }
+    .search-btn {
+      background: #4CAF50;
+      border-radius: 50px;
+      padding: 5px 20px;
+      color: white;
+      border: none;
+      font-weight: 600;
+      height: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .search-btn:hover {
+      background: #43a047;
+    }
+
+    .searchicons{
+        font-size: 30px;
+        margin-top: -15px;
+        font-weight: 100;
+    }
+
+#homesearchbar:focus{
+    border: none;
+  outline: none;
+  box-shadow: none; 
+}
+/*---------------------*/
+
+/*-drop-down-menuites css-*/
+ .dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .main-btn {
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+          font-weight:bolder;
+         font-style: bold;
+         color: #000;
+    }
+
+     .main-btn:hover
+     {
+        color: #00a651;
+         
+     }
+    /* LEFT MENU */
+    .left-menu {
+        width: 280px;
+        background: #00a651;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        display: none;
+        border-radius: 5px;
+        height: 550px;
+    }
+
+    .left-item {
+        display: block;
+        color: white;
+        padding: 12px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .left-item:hover {
+        background: #ff3030;
+        border-radius: 5px;
+       
+    }
+
+    /* RIGHT MENU */
+    .right-menu {
+        width: 260px;
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 45px;
+        left: 230px;
+        display: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        height: 550px;
+        margin-left: 50px;
+    }
+
+    .sub-box {
+        display: none;
+    }
+
+    .sub-box a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .sub-box a:hover {
+       background-color: red;
+       border-radius: 5px;
+       color: #f4f3f3;
+    }
+    .overallmenus{
+        margin-top: -45px;
+    } 
+
+
+    /*--banner button css --*/
+.bannerbtn{
+        height: 10px;
+        width: 15px;
+        background-color: #04d167;
+        border-radius: 50%;
+}
+
+
+
+    /*------*/
+/*---body content-1---*/
+.bodycontent-1{
+  width: 100%;
+  height: 100%;
+    background-image: url(./images/background\ images.jpg);
+    
+    background-size: cover;
+    overflow-x: hidden;
+}
+.wonders{
+      font-weight:bolder;
+         font-style: bold;
+         font-size: 3rem;
+}   
+@media screen and (max-width: 600px)
+ {
+    .wonders{
+        font-size: 2rem;
+        text-align: center;
+    }
+   .marginright{
+    margin-left: 0%;
+ }
+.categorytag{
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+ 
+.category-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+.category-item img:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+.category-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    
+}
+.marginright{
+    margin-left: -80px;
+}
+
+ .card {
+    border: none;
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .categoryshop{
+      width: 100%;
+  height: auto;
+    background-color:#f6f3dc;
+    background-size: cover;
+    border-radius: 5px;
+    
+
+  }
+
+  .containforcateoryshop{
+               background-image: url(./images/background\ images.jpg);
+               height: 100%;
+               overflow-x: hidden;
+  }
+
+  .categorytag{
+     font-weight:bolder;
+         font-style: bold;
+         font-size: 3rem;
+  }
+
+  /*24*7 images*/
+.image247{
+    padding-top: 60px;
+       
+}
+.bodycontent-3
+{
+    overflow-x: hidden;
+     background-image: url(./images/background\ images.jpg);
+               height: 100%;
+}
+
+/* WhatsApp chats css floating button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 90px;        /* Distance from bottom */
+    right: 20px;         /* Distance from right */
+    background: white;
+    border: 2px solid #25D366;
+    border-radius: 40px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.whatsapp-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Hover effect */
+.whatsapp-btn:hover {
+    background: #25D366;
+    color: #fff;
+}
+
+.whatsapp-btn:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Scroll to top button */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 2px solid #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* Hide initially */
+#topBtn {
+    display: none;
+}
+#topBtn:hover{
+    background-color: #00a651;
+    color: #fff;
+}
+
+/* whatsapp chats was close */
+
+.trustedgrocery{
+     background-image: url(./images/background\ images.jpg);
+     padding: 40px;
+}
