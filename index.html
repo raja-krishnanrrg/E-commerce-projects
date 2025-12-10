@@ -86,7 +86,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
 </div>
 
 <!--navbar for lab-->
-<div class="navigationbarforlab">
+<div class="navigationbarforlab" id="navlab">
 <nav class="navbar navbar-expand-lg navigationbar">
 <div class="container-fluid">
 <a class="navbar-brand" href="#"><img src="./images/marketlogo.jpg" alt="" style="width: 100px; height:70px"></a>
@@ -151,18 +151,11 @@ Note: Product availability, prices, and delivery options will vary based on the 
 </ul>
 </div> 
 <form class="d-flex " role="search">
-<!-- <div class="newsearchbar d-flex">
-<input class="form-control homesearchbar" type="search" placeholder="Search" aria-label="Search" id="homesearchbar"/>
-<i class='bx  bx-search-big mt-2 me-2 searchicons' style='color:#7a7a7a'></i> 
-</div> -->
-
-  <div class="search-box ">
-      
+  <div class="search-box ">  
     <i class='bx  bx-search-big mt-2 me-2 searchicons' style='color:#7a7a7a'></i> 
       <input type="text" class="search-input" placeholder="Search what you want ?">
       <button class="search-btn ms-5">Search</button>
     </div>
-  
 <i class='bx  bx-cart carticon ms-2' style='color:#545353'></i> 
 <span class="quantity">0</span>
 </form>
@@ -170,7 +163,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
 </div>
 </nav>
 <!--whatsappchats-->
-         <div class="whatsappcontact">
+         <div class="whatsappcontact d-none d-lg-block">
 <a href="https://wa.me/916383031374" target="_blank" class="whatsapp-btn">
     <span>Click to chat</span>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp">
@@ -187,7 +180,14 @@ Note: Product availability, prices, and delivery options will vary based on the 
 <div class="mobilenavbar">
 <nav class="p-2  text-white d-block d-md-none">
   <span style="font-size:26px; cursor:pointer;" onclick="openMenu()">☰</span>
+  <div class="search-box mobile-search">  
+    <i class='bx  bx-search-big mt-2 me-2 searchicons' style='color:#7a7a7a'></i> 
+      <input type="text" class="search-input" placeholder="Search what you want ?">
+      <button class="search-btn ms-5">Search</button>
+    </div>
 </nav>
+
+  
 
 <!-- MOBILE SIDEBAR -->
 <div id="mobileMenu">
@@ -198,20 +198,14 @@ Note: Product availability, prices, and delivery options will vary based on the 
   <!-- MAIN MENU -->
   <div id="mainMenu">
     <h5 class="mb-3">Menu</h5>
-
     <button class="btn btn-light w-100 text-start mb-2" onclick="openSubMenu()">
       Category →
     </button>
-
     <button class="btn btn-light w-100 text-start">Offers</button>
     <button class="btn btn-light w-100 text-start mt-2">Orders</button>
   </div>
-
-
   <div id="categoryMenu">
-    <span class="back-btn" onclick="closeSubMenu()">← Back</span>
-
-    
+    <span class="back-btn" onclick="closeSubMenu()">Back</span>
     <button class="btn btn-light w-100 text-start mb-2">Mobiles</button>
     <button class="btn btn-light w-100 text-start mb-2">Grocery</button>
     <button class="btn btn-light w-100 text-start mb-2">Home Appliances</button>
@@ -222,10 +216,11 @@ Note: Product availability, prices, and delivery options will vary based on the 
 
 
 <!--homepage banners-->
-<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div class="d-none d-lg-block mt-5 pt-5 " id="labbanner">
+<div id="bannerCarousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
    
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active banneractivs"></button>
     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"></button>
@@ -256,72 +251,121 @@ Note: Product availability, prices, and delivery options will vary based on the 
   <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon  bannerbtn "></span>
   </button>
+
+</div>
 </div>
 <!---->
 
-<!--body-content-->
-<div class="bodycontent-1">
-<div class="d-flex justify-content-center ">
-  <h1 class="wonders pt-5 ">Every Day Wonders </h1>
+<!--mobile banner-->
+
+ <div class="row d-lg-none d-md-block d-sm-block ">
+                <div class="col">
+                  <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-        <div class="row justify-content-center mt-5 categorry">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <div class="card text-bg-dark">
+                  <img src="./images/lap-1Desktop+Banner_24.jpg" class="card-img" alt="..." height="200px" width="150px">
+                      </div>
+      
+    </div>
+       <div class="carousel-item">
+        <div class="card text-bg-dark">
+                  <img src="./images/lap-4Desktop+Banner_1.jpg" class="card-img" alt="..." height="200px" width="150px">
+                  
+                      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card text-bg-dark">
+                  <img src="./images/lap-2+Banner_22.jpg" class="card-img" alt="..." height="200px" width="150px">
+                   
+                      </div>
+     
+    </div>
+    <div class="carousel-item">
+        <div class="card text-bg-dark">
+                  <img src="./images/lap-3Desktop+Banner_23.jpg" class="card-img" alt="..." height="200px" width="150px">
+                  
+                      </div>
+    </div>
+
+ 
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+                </div>
+</div>
+
+<!----->
+
+<!--body-content-->
+<div class="bodycontent-1 ps-3">
+<div class="d-flex justify-content-center ">
+  <h1 class="wonders pt-5 ms-2">Every Day Wonders </h1>
+  </div>
+        <div class="row justify-content-center mt-2 categorry">
             <!-- Item 1 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
-                    <img src="./images/glowradient.jpg" alt="">
-                    <div class="category-title">Glow & Radiant</div>
+                    <img src="./images/glowradient.jpg" alt="" id="glowimage">
+                    <div class="category-title" id="glowtext">Glow & Radiant</div>
                 </div>
             </div>
 
             <!-- Item 2 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
                 <div class="category-item ">
-                    <img src="./images/snacks hub.jpg" alt="">
-                    <div class="category-title ms-4">Snack Hub</div>
+                    <img src="./images/snacks hub.jpg" alt="" id="snacksimgae">
+                    <div class="category-title ms-4" id="snackscontent">Snack Hub</div>
                 </div>
             </div>
 
             <!-- Item 3 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
-                    <img src="./images/nutritious grains.jpg" alt="">
-                    <div class="category-title">Nutritious Grains</div>
+                    <img src="./images/nutritious grains.jpg" alt="" id="Nutritiousimage">
+                    <div class="category-title" id="Nutritioustext">Nutritious Grains</div>
                 </div>
             </div>
 
             <!-- Item 4 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
-                    <img src="./images/divine essentials.jpg" alt="">
-                    <div class="category-title">Divine Essentials</div>
+                    <img src="./images/divine essentials.jpg" alt="" id="divineimage">
+                    <div class="category-title" id="divinetext">Divine Essentials</div>
                 </div>
             </div>
 
             <!-- Item 5 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
                 <div class="category-item">
-                    <img src="./images/fabric care.jpg" alt="">
-                    <div class="category-title ms-4">Fabric Care</div>
+                    <img src="./images/fabric care.jpg" alt="" id="fabricimage">
+                    <div class="category-title ms-4" id="fabrictext" >Fabric Care</div>
                 </div>
             </div>
         </div>
-
     </div>
           <!-- Background Section -->
 
 
-          <div class="containforcateoryshop p-3 ">
+          <div class="containforcateoryshop p-5 ">
   <div class="container-lg">
 
-    <!-- Heading -->
-    <h2 class="text-center pt-5  categorytag">Shop By Category</h2>
+    <h2 class="text-center categorytag mt-3">Shop By Category</h2>
 <div class="categoryshop mt-3 pt-3">
-    <!-- Category Grid -->
+ 
     <div class="row g-4 justify-content-center p-4">
-
-      <!-- Category Item -->
-
-
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
         <div class="card text-center p-3 shadow-sm rounded-4">
         <a href=""> <img src="./images/deal of themonth.jpg" class="img-fluid rounded-3 mb-3" /></a> 
@@ -440,78 +484,194 @@ Note: Product availability, prices, and delivery options will vary based on the 
 </div>
 </div>
 
-
-
 <!--content daily needs-->
 
-<div class="bodycontent-3">
+
 
   <div class=" image247 p-5">
   <img src="./images/247 image.jpg" alt="" style="height: 100px; width:100%">
 </div>
-
-
+<div class="bodycontent-3">
 <div class="d-flex justify-content-center ">
-  <h1 class="wonders pt-5 ">Daily Needs </h1>
+  <h1 class="wonders pt-2">Daily Needs </h1>
   </div>
         <div class="row justify-content-center mt-5 categorry">
             <!-- Item 1 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
-                    <img src="./images/glowradient.jpg" alt="">
-                    <div class="category-title">Fresheners</div>
+                    <img src="./images/fresheners.jpg" alt="" id="Freshenersimage">
+                    <div class="category-title" id="Freshenerstext" >Fresheners</div>
                 </div>
             </div>
 
             <!-- Item 2 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
                 <div class="category-item ">
-                    <img src="./images/snacks hub.jpg" alt="">
-                    <div class="category-title ms-4">Oral Care</div>
+                    <img src="./images/oral care.jpg" alt="" id="oralcareimage">
+                    <div class="category-title ms-4" id="oralproductext">Oral Care</div>
                 </div>
             </div>
 
             <!-- Item 3 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
-                    <img src="./images/nutritious grains.jpg" alt="">
-                    <div class="category-title">Western Mania</div>
+                    <img src="./images/westermania.jpg" alt="" id="westernmaniaimage">
+                    <div class="category-title" id="weternmaniatext">Western Mania</div>
                 </div>
             </div>
 
             <!-- Item 4 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
-                    <img src="./images/divine essentials.jpg" alt="">
-                    <div class="category-title">Bath needs</div>
+                    <img src="./images/bath needs.jpg" alt="" id="bathneedimage">
+                    <div class="category-title" id="bathtext">Bath needs</div>
                 </div>
             </div>
 
             <!-- Item 5 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
                 <div class="category-item">
-                    <img src="./images/fabric care.jpg" alt="">
-                    <div class="category-title ms-4">Soothing Sips</div>
+                    <img src="./images/soothing sips.jpg" alt="" id="soothingimage">
+                    <div class="category-title ms-4" id="soothingtext">Soothing Sips</div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
-    <div class="trustedgrocery pt-5 ">
+    <div class="trustedgrocery">
       <img src="./images/truested roceriesimages.jpg" alt="scrolling" style="width: 100%;">
     </div>
+      <!---homepage add to cart-->
+      <div class="carthomecontainerr">
+<div class="p-4 homepageaddtocart">
+<h2 class=" wonders text-center mb-4">Our Favourites</h2>
+<!-- CATEGORY SECTION -->
+<div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+    <div class="catbuttons active ps-4 pt-2" data-cat="infant">Infant Zone</div>
+    <div class="catbuttons ps-4 pt-2" data-cat="choco">Chocolates</div>
+    <div class="catbuttons ps-5 pt-2" data-cat="hair">Hair Care</div>
+    <div class="catbuttons ps-3 pt-2" data-cat="men">Men's Grooming</div>
+</div>
+
+<!-- SLIDER START -->
+<div class="slider-container d-flex justify-content-center">
+    <div class="arrow arrow-left"><i class="bi bi-chevron-left"></i></div>
+    <div class="arrow arrow-right"><i class="bi bi-chevron-right"></i></div>
+    <div class="product-slider" id="productSlider">
+        <!-- JS WILL INSERT EXACT PRODUCT BOXES -->
+    </div>
+</div>
+</div>
 
 
+</div>
 
+<div class="smartshoppy">
+      <img src="./images/smart shoppers.jpg" alt="scrolling" style="width: 100%;">
+    </div>
 
+     
 
+    <!--footer section-->
 
+    <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-4">
 
+        <!-- LEFT: Logo + address -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo mb-3">
+            <!-- Replace with real logo -->
+            <img src="https://via.placeholder.com/140x60?text=arthi+logo" alt="Arthi logo">
+          </div>
+          <div class="text-muted" style="max-width:280px;">
+            Sri Ram Avenue, Coimbatore,<br>
+            Coimbatore,<br>
+            Tamil Nadu - 641108
+          </div>
+        </div>
 
+        <!-- CENTER: Need Help -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-3">Need Help</h5>
 
+          <div class="help-block">
+            <div class="phone">
+              <span class="fs-4 text-success"><i class="bi bi-headset"></i></span>
+              <span>9626522266</span>
+            </div>
 
+            <div class="help-divider" aria-hidden="true"></div>
+
+            <div class="email">
+              <span class="fs-5"><i class="bi bi-envelope"></i></span>
+              <span class="small">arthismordervadavalli@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Categories & Links -->
+        <div class="col-lg-4 col-md-12">
+          <h5 class="fw-bold mb-3">Categories</h5>
+
+          <div class="categories d-flex flex-wrap">
+            <a href="#">Arthi Specials</a>
+            <span class="text-muted">|</span>
+            <a href="#">Deals of the Month</a>
+            <span class="text-muted">|</span>
+            <a href="#">Cooking Essentials</a>
+            <span class="text-muted">|</span>
+            <a href="#">Ready to Cook</a>
+            <span class="text-muted">|</span>
+            <a href="#">Dry Fruits</a>
+            <span class="text-muted">|</span>
+            <a href="#">Fruits &amp; Veggies</a>
+            <span class="text-muted">|</span>
+            <a href="#">Personal Care</a>
+            <!-- add more as needed -->
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="small">
+              <a href="#" class="me-2">Home</a>
+              <a href="#" class="me-2">Deals</a>
+              <a href="#">New Arrivals</a>
+            </div>
+
+            <div>
+              <a class="social-btn me-2" href="#" title="facebook"><i class="bi bi-facebook fs-5"></i></a>
+              <a class="social-btn" href="#" title="instagram"><i class="bi bi-instagram fs-5"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom links -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+        <div class="small text-muted">
+          <a href="#" class="me-3">Privacy Policy</a>
+          <a href="#" class="me-3">Refund Policy</a>
+          <a href="#" class="me-3">Terms and Condition</a>
+        </div>
+
+        <div class="text-muted small mt-3 mt-md-0">
+          © 2025 Arthi Supermarket. All Right Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+   <div class="mobilewhatsapp d-done sm-d-block">
+  <a href="https://wa.me/919626522266" target="_blank" class="whatsapp-fab" aria-label="Whatsapp">
+    <span class="wa-icon"><i class="bi bi-whatsapp"></i></span>
+    <span class="d-none d-sm-inline">Click to chat</span>
+  </a>
+   <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up fs-5" style="color:var(--accent)"></i>
+  </button>
+</div>
+  <!-- Scroll to top -->
+ 
 <script src="homepage.js"></script>
 </body>
 </html>

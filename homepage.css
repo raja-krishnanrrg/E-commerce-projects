@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
     user-select: none; 
    
+   
 }
 /*css for drop down delivery options*/
 .deliverycontainer{
@@ -35,13 +36,13 @@
     text-decoration: none;
     font-size:15px;;
     color: aliceblue;
-   
 }
 .slash{
         font-size: 20px;
       color: aliceblue;
 }
-.downarrowicon{
+.downarrowicon
+{
     font-weight:bolder;
     font-style: bold;
 }
@@ -62,6 +63,9 @@
 .calls{
     margin-right: 30%;
 }
+#glowtext{
+    display: none;
+}
 }
 .toglebutton {
     border: none;
@@ -80,9 +84,9 @@
 #mobileMenu {
       position: fixed;
       top: 0;
-      left: -300px;
-      height: 100vh;
-      width: 260px;
+      left:-300px;
+      height: 120vh;
+      width: 300px;
       background: #fff;
       box-shadow: 2px 0 10px rgba(0,0,0,0.3);
       transition: 0.3s ease;
@@ -93,7 +97,9 @@
     #mobileMenu.active {
       left: 0;
     }
-
+    .mobile-search{
+        width: 100px;
+    }
     /* Submenu */
     .categoryMenu {
       display: none;
@@ -113,8 +119,6 @@
       top: 15px;
       right: 15px;
     }
-
-
 /**/
 .quantity{
     height: 10px;
@@ -163,7 +167,11 @@
 .navigationbarforlab{
     box-sizing: border-box;
     box-shadow: 0px 0px 1px 1px rgb(180, 178, 178);
-    position: static;
+    position: fixed;
+    top: 5;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
 }
 /* search bar css*/
  .search-box {
@@ -217,7 +225,53 @@
   box-shadow: none; 
 }
 /*---------------------*/
+/*Every day wonders*/
 
+#glowtext{
+        display: none;
+        font-weight:bolder;
+        font-style: bold;
+        text-shadow: 1px 1px 20px #11fd04;
+        font-size: 20px;
+                overflow: hidden;
+}
+#snackscontent{
+        display: none;
+        font-weight:bolder;
+        font-style: bold;
+        text-shadow: 1px 1px 20px #11fd04;
+        font-size: 20px;
+                overflow: hidden;
+}
+#Nutritioustext{
+    display: none;
+    font-weight:bolder;
+    font-style: bold;
+    text-shadow: 1px 1px 20px #11fd04;
+    font-size: 20px;
+            overflow: hidden;
+}
+#divinetext{
+        display: none;
+        font-weight:bolder;
+        font-style: bold;
+        text-shadow: 1px 1px 20px #11fd04;
+        overflow: hidden;
+        font-size: 20px;
+}
+
+#fabrictext{
+        display: none;
+        font-weight:bolder;
+        font-style: bold;
+        text-shadow: 1px 1px 20px #11fd04;
+        overflow: hidden;
+        font-size: 20px;
+}
+ 
+
+
+/*--------*/
 /*-drop-down-menuites css-*/
  .dropdown-wrapper {
         position: relative;
@@ -229,7 +283,7 @@
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
-          font-weight:bolder;
+        font-weight:bolder;
          font-style: bold;
          color: #000;
     }
@@ -301,113 +355,6 @@
     } 
 
 
-    /*--banner button css --*/
-.bannerbtn{
-        height: 10px;
-        width: 15px;
-        background-color: #04d167;
-        border-radius: 50%;
-}
-
-
-
-    /*------*/
-/*---body content-1---*/
-.bodycontent-1{
-  width: 100%;
-  height: 100%;
-    background-image: url(./images/background\ images.jpg);
-    
-    background-size: cover;
-    overflow-x: hidden;
-}
-.wonders{
-      font-weight:bolder;
-         font-style: bold;
-         font-size: 3rem;
-}   
-@media screen and (max-width: 600px)
- {
-    .wonders{
-        font-size: 2rem;
-        text-align: center;
-    }
-   .marginright{
-    margin-left: 0%;
- }
-.categorytag{
-        font-size: 2rem;
-        text-align: center;
-    }
-}
- 
-.category-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: auto;
-}
-.category-item img:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-}
-
-
-.category-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 10px;
-    
-}
-.marginright{
-    margin-left: -80px;
-}
-
- .card {
-    border: none;
-    transition: 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  .categoryshop{
-      width: 100%;
-  height: auto;
-    background-color:#f6f3dc;
-    background-size: cover;
-    border-radius: 5px;
-    
-
-  }
-
-  .containforcateoryshop{
-               background-image: url(./images/background\ images.jpg);
-               height: 100%;
-               overflow-x: hidden;
-  }
-
-  .categorytag{
-     font-weight:bolder;
-         font-style: bold;
-         font-size: 3rem;
-  }
-
-  /*24*7 images*/
-.image247{
-    padding-top: 60px;
-       
-}
-.bodycontent-3
-{
-    overflow-x: hidden;
-     background-image: url(./images/background\ images.jpg);
-               height: 100%;
-}
-
 /* WhatsApp chats css floating button */
 .whatsapp-btn {
     position: fixed;
@@ -473,8 +420,381 @@
 }
 
 /* whatsapp chats was close */
+    /*------*/
 
-.trustedgrocery{
-     background-image: url(./images/background\ images.jpg);
-     padding: 40px;
+
+        /*--banner button css --*/
+.bannerbtn{
+        height: 10px;
+        width: 15px;
+        background-color: #04d167;
+        border-radius: 50%;
 }
+
+.labanner {
+padding-top: 30px;
+}
+/*---body content-1---*/
+.bodycontent-1{
+    width: 100%;
+    height:75lvh;
+    background-image: url(./images/background\ images.jpg);
+   background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+/*--daily needs--*/
+.image247{
+ background-image: url(./images/background\ images.jpg);
+   background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-size: cover;
+}
+#Freshenerstext{
+display: none;
+font-weight:bolder;
+font-style: bold;
+text-shadow: 1px 1px 20px #11fd04;
+overflow: hidden;
+font-size: 20px;
+}
+#oralproductext{
+    display: none;
+font-weight:bolder;
+font-style: bold;
+text-shadow: 1px 1px 20px #11fd04;
+overflow: hidden;
+font-size: 20px;
+
+}
+#weternmaniatext{
+    display: none;
+font-weight:bolder;
+font-style: bold;
+text-shadow: 1px 1px 20px #11fd04;
+overflow: hidden;
+font-size: 20px;
+
+}
+#bathtext{
+    display: none;
+font-weight:bolder;
+font-style: bold;
+text-shadow: 1px 1px 20px #11fd04;
+overflow: hidden;
+font-size: 20px;
+
+}
+#soothingtext{
+    display: none;
+font-weight:bolder;
+font-style: bold;
+text-shadow: 1px 1px 20px #11fd04;
+overflow: hidden;
+font-size: 20px;
+
+}
+
+/*--*/
+.wonders{
+      font-weight:bolder;
+         font-style: bold;
+         font-size: 3rem;
+}   
+@media screen and (max-width: 600px)
+ {
+    .wonders
+    {
+        font-size: 2rem;
+        text-align: center;
+    }
+   .marginright{
+    margin-left: 0%;
+ }
+.categorytag{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .mobilewhatsapp{
+        display:block;
+    }
+}
+ 
+.category-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+.category-item img:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+.category-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    display: none;   
+}
+.marginright{
+    margin-left: -80px;
+}
+ .card {
+    border: none;
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .categoryshop{
+    width: 100%;
+    height: auto;
+    background-color:#f6f3dc;
+    background-size: cover;
+    border-radius: 5px;
+     overflow-x: hidden;
+  }
+  .containforcateoryshop{
+                background-image: url(./images/background\ images.jpg);
+               height:100%;
+               overflow-x: hidden;
+               background-size: contain;
+               margin-top: -18%;
+  }
+  .categorytag{
+     font-weight:bolder;
+         font-style: bold;
+         font-size: 3rem;
+  }
+  /*24*7 images*/
+.image247{
+    padding-top: 60px;      
+}
+.bodycontent-3
+{
+        background-image:url(./images/background\ images.jpg);
+        height: 70vh;
+         overflow-x: hidden;
+         background-repeat: no-repeat;
+         width: 100%;
+         background-size: cover;
+}
+
+.categorry{
+    overflow: hidden;
+}
+
+.trustedgrocery
+{
+        background-image:url(./images/background\ images.jpg);
+        height: 100%;
+         overflow-x: hidden;
+         background-repeat: no-repeat;
+         width: 100%;
+         background-size: cover;
+    padding: 60px;
+}
+
+/*homepageaddtocart*/
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+    }
+    .product-slider {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+    }
+    .product-slider::-webkit-scrollbar {
+        display: none;
+    }
+    .arrow {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 45%;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .arrow-left {
+        left: 10px;
+    }
+    .arrow-right {
+        right: 10px;
+    }
+    .product-box {
+        width: 260px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        padding: 15px;
+        background: #fff;
+    }
+    .product-box .addtocart{
+       background-color: #3bee04;
+      color:#000;
+    }
+    .product-box .addtocart:hover{
+       background-color: #a8e804;
+    }
+    .bi-cart-plus{
+      font-weight: 600;
+      font-size:17px;
+      
+    }
+.carthomecontainerr
+{
+         background-image:url(./images/background\ images.jpg);
+        height: 100%;
+         overflow-x: hidden;
+         background-repeat: no-repeat;
+         width: 100%;
+         background-size: cover;
+         padding: 70px;
+}
+
+.catbuttons{
+        font-weight:bolder;
+    font-style: bold;
+    color: black;
+   
+}
+.catbuttons{
+    height: 40px;
+    width: 150px;
+    background-color: #11fd04;
+    border-radius: 10px;
+}
+.catbuttons:hover{
+    background-color: #a8e804;
+}
+.homepageaddtocart{
+    background-color:#f6f3dc;
+    height: auto;
+}
+/*---*/
+
+/*smart shoppy*/
+.smartshoppy{
+    padding: 30px;
+}
+
+/*footersection*/
+
+
+    body { margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+    /* Footer base */
+    .site-footer{
+      background: var(--arthi-bg);
+      color: #1a1a1a;
+      padding-top: 48px;
+      padding-bottom: 36px;
+      border-top: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .site-footer a { color: inherit; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* Logo & address */
+    .footer-logo img { max-width: 140px; height: auto; display:block; }
+
+    /* Need Help block */
+    .help-block .phone {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      font-weight:600;
+      font-size:1.05rem;
+      color: #0f5132;
+    }
+    .help-block .email {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      color: var(--muted);
+      margin-top:14px;
+    }
+    .help-divider{
+      height:1px;
+      background: rgba(0,0,0,0.06);
+      margin: 18px 0;
+    }
+
+    /* Categories column - make items wrap */
+    .categories a { margin-right: .5rem; margin-bottom: .25rem; white-space: nowrap; color: var(--muted); font-size:.95rem; }
+
+    /* bottom row */
+    .footer-bottom { padding-top: 18px; padding-bottom: 6px; border-top: 1px solid rgba(0,0,0,0.04); margin-top: 20px; }
+
+    .social-btn { width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+
+    /* WhatsApp floating button */
+    .whatsapp-fab{
+      position: fixed;
+      right: 18px;
+      bottom: 86px;
+      z-index: 1100;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      background: #fff;
+      padding: 8px 12px;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border: 2px solid #1f9a4b;
+      align-items:center;
+      font-weight:600;
+      color: #1f9a4b;
+    }
+    .whatsapp-fab .wa-icon{
+      background: #1f9a4b;
+      color: white;
+      width:36px;
+      height:36px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      font-size:1.1rem;
+    }
+
+    /* Scroll-top circle */
+    .scroll-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background: white;
+      border: 2px solid #1f9a4b;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      z-index: 1100;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767.98px) {
+      .site-footer { padding-top: 28px; padding-bottom: 28px; }
+      .categories { margin-top: 10px; }
+      .whatsapp-fab { right: 12px; bottom: 92px; padding: 6px 10px; }
+    }
+
+    .mobilewhatsapp{
+        display: none;
+    }
