@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shoppiee!!</title>
+<title>Homepage</title>
 <link rel="stylesheet" href="homepage.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -11,11 +11,12 @@
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<div class="overallheadercontainer">
 <div class="deliverycontainer">
   <span class="text-light ms-2">Home</span>
 <span class="ms-3 slash">|</span>
 <i class="bi bi-geo-alt ps-1 text-light"></i>
-<button class="btn btn toglebutton text-light  " data-bs-toggle="modal" data-bs-target="#locationModal" style="border: none;">
+<button class="btn btn toglebutton text-light  " data-bs-toggle="modal" data-bs-target="#locationModal" style="border: none;" >
 Delivery To : Sulur <i class="bi bi-chevron-down downarrowicon"></i>  
 </button>
 
@@ -79,9 +80,9 @@ Note: Product availability, prices, and delivery options will vary based on the 
 </div>
 </div>
 
-<div class="d-flex  calls ">
-<i class="bi bi-headset"></i><span class="phonenum ms-2 "> Call:91+ 6383031374</span>
-<a href="#" class=" homebutton ms-4 px-5">Login</a>
+<div class="d-flex  calls   ">
+<a class="phonenum " href="tel:+916383031374"><i class="bi bi-headset ms-3"></i><span class="phonenum ms-2 "><a class="phonenum" href="tel:+916383031374">6383031374</a></span>
+<a href="#" class=" homebutton ms-2 ">Login<i class="bi bi-person-fill"></i></a>
 </div>
 </div>
 
@@ -89,7 +90,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
 <div class="navigationbarforlab" id="navlab">
 <nav class="navbar navbar-expand-lg navigationbar">
 <div class="container-fluid">
-<a class="navbar-brand" href="#"><img src="./images/marketlogo.jpg" alt="" style="width: 100px; height:70px"></a>
+<a class="navbar-brand" href="#"><img src="./images/marketlogo.jpg" alt="" style="width: 100px; height:70px" class="market-logo"></a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -150,43 +151,59 @@ Note: Product availability, prices, and delivery options will vary based on the 
 
 </ul>
 </div> 
-<form class="d-flex " role="search">
-  <div class="search-box ">  
-    <i class='bx  bx-search-big mt-2 me-2 searchicons' style='color:#7a7a7a'></i> 
+<form class="d-flex" role="search">
+  <div class="search-box me-3 ">  
+    <i class='bx  bx-search-big mt-1 me-2 searchicons' style='color:#7a7a7a'></i> 
       <input type="text" class="search-input" placeholder="Search what you want ?">
       <button class="search-btn ms-5">Search</button>
     </div>
-<i class='bx  bx-cart carticon ms-2' style='color:#545353'></i> 
-<span class="quantity">0</span>
+<i class='bx  bx-cart carticon ' style='color:#545353'></i> 
+<span class="quantity me-5">0</span>
 </form>
 </div>
 </div>
 </nav>
 <!--whatsappchats-->
-         <div class="whatsappcontact d-none d-lg-block">
-<a href="https://wa.me/916383031374" target="_blank" class="whatsapp-btn">
-    <span>Click to chat</span>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp">
-</a>
-</div>
+      <div class="whatsappcontact d-none d-lg-block">
+      <a href="https://wa.me/916383031374" target="_blank" class="whatsapp-btn">
+      <span>Click to chat</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp">
+      </a>
+      </div>
 <!-- Scroll to Top Button -->
+  <i class="bi bi-arrow-up sm-me-5" id="topBtn"></i>
+<!---->
+  <!-- WhatsApp floating button -->
+   <div class="mobilewhatsapp">
+  <a href="https://wa.me/6383031374" target="_blank" class="whatsapp-fab" aria-label="Whatsapp">
+    <span class="wa-icon"><i class="bi bi-whatsapp"></i></span>
+    <span class="d-none d-sm-inline">Click to chat</span>
+  </a>
+  </div>
+   <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" id="arrowscroll">
+    <i class="bi bi-arrow-up fs-5" style="color:var(--accent)"></i>
+  </button>
 
-  <i class="bi bi-arrow-up" id="topBtn"></i>
-    
 
 <!---->
-
 <!--navbarformobile-->
 <div class="mobilenavbar">
-<nav class="p-2  text-white d-block d-md-none">
-  <span style="font-size:26px; cursor:pointer;" onclick="openMenu()">☰</span>
-  <div class="search-box mobile-search">  
-    <i class='bx  bx-search-big mt-2 me-2 searchicons' style='color:#7a7a7a'></i> 
-      <input type="text" class="search-input" placeholder="Search what you want ?">
-      <button class="search-btn ms-5">Search</button>
-    </div>
-</nav>
+<nav class="p-2  text-white d-block d-md-none d-flex">
+  <span style="font-size:26px; cursor:pointer;" onclick="openMenu()" class="mt-2">☰</span>
+  <div class="mobileviewsearch d-flex ">
 
+    <img class="mobilemarketlogo ms-3" src="./images/marketlogo.jpg" alt="" style="height: 50px; width:70px">
+  <div class=" mobile-search-option  ms-4 mt-2 d-flex">  
+      <input type="text" class="mobile-searchbaaring" placeholder="Search...">
+      <button class="  mobile-searchbutton "><i class="bi bi-search"></i></button>
+      </div>
+       <div class="mobilequntity d-flex ms-5">
+        <span> <i class='bx  bx-cart carticon mt-2' style='color:#ffff'></i> </span>
+       <span class="quantity mt-1">0</span>
+       </div>
+  </div>
+</nav>
+</div>
   
 
 <!-- MOBILE SIDEBAR -->
@@ -211,11 +228,13 @@ Note: Product availability, prices, and delivery options will vary based on the 
     <button class="btn btn-light w-100 text-start mb-2">Home Appliances</button>
   </div>
 </div>
-</div>
-<!---->
 
+<!---->
+<!--headersection-close--->
+</div>
 
 <!--homepage banners-->
+<div class="homebanners">
 <div class="d-none d-lg-block mt-5 pt-5 " id="labbanner">
 <div id="bannerCarousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
    
@@ -254,62 +273,115 @@ Note: Product availability, prices, and delivery options will vary based on the 
 
 </div>
 </div>
+
 <!---->
 
 <!--mobile banner-->
+  <div class="mobilebanner ">
+      <div class="row d-lg-none d-md-block d-sm-block ">
+      <div class="col">
+      <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+      <div class="card text-bg-dark">
+      <img src="./images/lap-1Desktop+Banner_24.jpg" class="card-img" alt="..." height="200px" width="150px">
+      </div>
 
- <div class="row d-lg-none d-md-block d-sm-block ">
-                <div class="col">
-                  <div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-       <div class="card text-bg-dark">
-                  <img src="./images/lap-1Desktop+Banner_24.jpg" class="card-img" alt="..." height="200px" width="150px">
-                      </div>
-      
-    </div>
-       <div class="carousel-item">
-        <div class="card text-bg-dark">
-                  <img src="./images/lap-4Desktop+Banner_1.jpg" class="card-img" alt="..." height="200px" width="150px">
-                  
-                      </div>
-    </div>
-    <div class="carousel-item">
-        <div class="card text-bg-dark">
-                  <img src="./images/lap-2+Banner_22.jpg" class="card-img" alt="..." height="200px" width="150px">
-                   
-                      </div>
-     
-    </div>
-    <div class="carousel-item">
-        <div class="card text-bg-dark">
-                  <img src="./images/lap-3Desktop+Banner_23.jpg" class="card-img" alt="..." height="200px" width="150px">
-                  
-                      </div>
-    </div>
+      </div>
+      <div class="carousel-item">
+      <div class="card text-bg-dark">
+      <img src="./images/lap-4Desktop+Banner_1.jpg" class="card-img" alt="..." height="200px" width="150px">
 
- 
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-                </div>
-</div>
+      </div>
+      </div>
+      <div class="carousel-item">
+      <div class="card text-bg-dark">
+      <img src="./images/lap-2+Banner_22.jpg" class="card-img" alt="..." height="200px" width="150px">
 
-<!----->
+      </div>
 
+      </div>
+      <div class="carousel-item">
+      <div class="card text-bg-dark">
+      <img src="./images/lap-3Desktop+Banner_23.jpg" class="card-img" alt="..." height="200px" width="150px">
+      </div>
+      </div>
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+<!---->
 <!--body-content-->
+<!--everydaywonders scroll mobile view-->
+      <div class="evrydayoverflow">
+<div class="row d-lg-none d-md-block d-sm-block">
+  <div class="everydaywondersscrollmobileview">
+ <div class="col-lg-2  shadow ">
+       <div class="d-flex flex-lg-column  flex-sm-row  overflow-auto mt-4 ms-4 md-auto ">
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                              <div class="category-item">
+                          <img src="./images/glowradient.jpg" alt="" id="">
+                          <h1 class="overflowtext">Glow & Radiant</h1>
+                         
+                          </div>
+                        </div>
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                              <div class="category-item">
+                          <img src="./images/snacks hub.jpg" alt="" id="">
+                                 <h1 class="overflowtext">Snacks Hub</h1>
+                          </div>
+                            
+                        </div>
+
+                        <div class=" recipes d-flex align-items-center me-3 mt-3">
+                             <div class="category-item">
+                          <img src="./images/nutritious grains.jpg" alt="" id="">
+                         <h1 class="overflowtext">Nutritious Grains</h1>
+                          </div>
+                            
+                        </div>
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                              <div class="category-item">
+                          <img src="./images/divine essentials.jpg" alt="" id="">
+                         <h1 class="overflowtext">Divine Essentials</h1>
+                          </div>
+                        </div>
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                             <div class="category-item">
+                          <img src="./images/fabric care.jpg" alt="" id="">
+                           <h1 class="overflowtext">Fabric care</h1>
+                          </div>
+                        </div>
+                        
+                    </div>
+         </div>
+ </div>
+</div>
+</div>
+
+
+
+<!---->
+ <div class="containeverydaywonders">
 <div class="bodycontent-1 ps-3">
 <div class="d-flex justify-content-center ">
   <h1 class="wonders pt-5 ms-2">Every Day Wonders </h1>
@@ -351,18 +423,19 @@ Note: Product availability, prices, and delivery options will vary based on the 
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
                 <div class="category-item">
                     <img src="./images/fabric care.jpg" alt="" id="fabricimage">
-                    <div class="category-title ms-4" id="fabrictext" >Fabric Care</div>
+                    <div class="category-title ms-1" id="fabrictext" >Fabric Care</div>
                 </div>
             </div>
         </div>
     </div>
+ </div>
           <!-- Background Section -->
 
 
           <div class="containforcateoryshop p-5 ">
   <div class="container-lg">
 
-    <h2 class="text-center categorytag mt-3">Shop By Category</h2>
+    <h2 class="text-center categorytag mt-3 pt-4">Shop By Category</h2>
 <div class="categoryshop mt-3 pt-3">
  
     <div class="row g-4 justify-content-center p-4">
@@ -491,7 +564,63 @@ Note: Product availability, prices, and delivery options will vary based on the 
   <div class=" image247 p-5">
   <img src="./images/247 image.jpg" alt="" style="height: 100px; width:100%">
 </div>
+
+
+<!--dailyneeds mobile view-->
+ <div class="evrydayoverflow">
+    <div class="row d-lg-none d-md-block d-sm-block">
+         <div class="everydaywondersscrollmobileview">
+        <div class="d-flex flex-lg-column  flex-sm-row  overflow-auto mt-4 ms-4 md-auto ">
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                              <div class="category-item">
+                          <img src="./images/fresheners.jpg" alt="" id="">
+                          <h1  class="overflowtext">fresheners</h1>
+                         
+                          </div>
+                        </div>
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                              <div class="category-item">
+                          <img src="./images/oral care.jpg" alt="" id="">
+                                 <h1  class="overflowtext">Oral Care</h1>
+                          </div>
+                            
+                        </div>
+
+                        <div class=" recipes d-flex align-items-center me-3 mt-3">
+                             <div class="category-item">
+                          <img src="./images/westermania.jpg" alt="" id="">
+                         <h1  class="overflowtext">wester Mania</h1>
+                          </div>
+                            
+                        </div>
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                              <div class="category-item">
+                          <img src="./images/bath needs.jpg" alt="" id="">
+                         <h1  class="overflowtext">Bath needs</h1>
+                          </div>
+                        </div>
+
+                        <div class="recipes d-flex align-items-center me-3 mt-3">
+                             <div class="category-item">
+                      <a href=""> <img src="./images/soothing sips.jpg" alt="" id=""></a> 
+                           <h1  class="overflowtext">soothing sips</h1>
+                          </div>
+                        </div>
+                       
+                    </div>
+         </div>
+    
+      <!---->
+     
+    </div>
+   </div>
+  
+<!---->
 <div class="bodycontent-3">
+  <div class="dailyneeds">
 <div class="d-flex justify-content-center ">
   <h1 class="wonders pt-2">Daily Needs </h1>
   </div>
@@ -537,14 +666,16 @@ Note: Product availability, prices, and delivery options will vary based on the 
             </div>
         </div>
     </div>
+
+    </div>
     <div class="trustedgrocery">
       <img src="./images/truested roceriesimages.jpg" alt="scrolling" style="width: 100%;">
     </div>
-      <!---homepage add to cart-->
-      <div class="carthomecontainerr">
+      <!---homepage add to cart
+     <div class="carthomecontainerr">
 <div class="p-4 homepageaddtocart">
 <h2 class=" wonders text-center mb-4">Our Favourites</h2>
-<!-- CATEGORY SECTION -->
+
 <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
     <div class="catbuttons active ps-4 pt-2" data-cat="infant">Infant Zone</div>
     <div class="catbuttons ps-4 pt-2" data-cat="choco">Chocolates</div>
@@ -552,27 +683,24 @@ Note: Product availability, prices, and delivery options will vary based on the 
     <div class="catbuttons ps-3 pt-2" data-cat="men">Men's Grooming</div>
 </div>
 
-<!-- SLIDER START -->
 <div class="slider-container d-flex justify-content-center">
     <div class="arrow arrow-left"><i class="bi bi-chevron-left"></i></div>
     <div class="arrow arrow-right"><i class="bi bi-chevron-right"></i></div>
     <div class="product-slider" id="productSlider">
-        <!-- JS WILL INSERT EXACT PRODUCT BOXES -->
+         JS WILL INSERT EXACT PRODUCT BOXES 
     </div>
 </div>
 </div>
 
 
-</div>
+</div> -->
 
 <div class="smartshoppy">
       <img src="./images/smart shoppers.jpg" alt="scrolling" style="width: 100%;">
     </div>
 
-     
-
     <!--footer section-->
-
+<div class="footersection">
     <footer class="site-footer">
     <div class="container">
       <div class="row gy-4">
@@ -581,10 +709,10 @@ Note: Product availability, prices, and delivery options will vary based on the 
         <div class="col-lg-4 col-md-6">
           <div class="footer-logo mb-3">
             <!-- Replace with real logo -->
-            <img src="https://via.placeholder.com/140x60?text=arthi+logo" alt="Arthi logo">
+            <img src="./images/footermarketlogo.jpg" class="market-logo">
           </div>
           <div class="text-muted" style="max-width:280px;">
-            Sri Ram Avenue, Coimbatore,<br>
+            Thirchy Road,Sulur<br>
             Coimbatore,<br>
             Tamil Nadu - 641108
           </div>
@@ -596,15 +724,15 @@ Note: Product availability, prices, and delivery options will vary based on the 
 
           <div class="help-block">
             <div class="phone">
-              <span class="fs-4 text-success"><i class="bi bi-headset"></i></span>
-              <span>9626522266</span>
+              <span class="fs-4 text-success"><a class="phonenum" href="tel:+916383031374"><i class="bi bi-headset fs-1"></i></a></span>
+              <span><a href="tel:+916383031374">6383031374</a></span>
             </div>
 
             <div class="help-divider" aria-hidden="true"></div>
 
             <div class="email">
               <span class="fs-5"><i class="bi bi-envelope"></i></span>
-              <span class="small">arthismordervadavalli@gmail.com</span>
+              <span class="small"> <a href="mailto:krishnanraja021@gmail.com">Krishnanraja021@gmail.com</a></span>
             </div>
           </div>
         </div>
@@ -614,7 +742,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
           <h5 class="fw-bold mb-3">Categories</h5>
 
           <div class="categories d-flex flex-wrap">
-            <a href="#">Arthi Specials</a>
+            <a href="#">Montectio Specials</a>
             <span class="text-muted">|</span>
             <a href="#">Deals of the Month</a>
             <span class="text-muted">|</span>
@@ -637,7 +765,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
               <a href="#">New Arrivals</a>
             </div>
 
-            <div>
+            <div class="social-media">
               <a class="social-btn me-2" href="#" title="facebook"><i class="bi bi-facebook fs-5"></i></a>
               <a class="social-btn" href="#" title="instagram"><i class="bi bi-instagram fs-5"></i></a>
             </div>
@@ -654,24 +782,14 @@ Note: Product availability, prices, and delivery options will vary based on the 
         </div>
 
         <div class="text-muted small mt-3 mt-md-0">
-          © 2025 Arthi Supermarket. All Right Reserved
+          © 2025 Montectio Supermarket. All Right Reserved
         </div>
       </div>
     </div>
+  </div>
   </footer>
 
-  <!-- WhatsApp floating button -->
-   <div class="mobilewhatsapp d-done sm-d-block">
-  <a href="https://wa.me/919626522266" target="_blank" class="whatsapp-fab" aria-label="Whatsapp">
-    <span class="wa-icon"><i class="bi bi-whatsapp"></i></span>
-    <span class="d-none d-sm-inline">Click to chat</span>
-  </a>
-   <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
-    <i class="bi bi-arrow-up fs-5" style="color:var(--accent)"></i>
-  </button>
-</div>
-  <!-- Scroll to top -->
- 
+
 <script src="homepage.js"></script>
 </body>
 </html>

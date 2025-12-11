@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deals page</title>
+<link rel="stylesheet" href="dealspage.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href='https://cdn.boxicons.com/3.0.5/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<div class="overallheadercontainer">
+<div class="deliverycontainer">
+  <span class="text-light ms-2">Home</span>
+<span class="ms-3 slash">|</span>
+<i class="bi bi-geo-alt ps-1 text-light"></i>
+<button class="btn btn toglebutton text-light  " data-bs-toggle="modal" data-bs-target="#locationModal" style="border: none;" >
+Delivery To : Sulur <i class="bi bi-chevron-down downarrowicon"></i>  
+</button>
+
+<!-- Location Modal -->
+<div class="modal fade" id="locationModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content p-3">
+
+<div class="modal-header border-0">
+<h5 class="modal-title fw-bold">Specify Your Location</h5>
+<hr class="mt-4"/>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+
+<!-- Delivery / Pickup Toggle -->
+<div class="d-flex gap-4 mb-3">
+<div class="form-check">
+  <input class="form-check-input bg-success" type="radio" name="locationType" id="delivery" checked>
+  <label class="form-check-label fw-semibold" for="delivery">Delivery</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input bg-success" type="radio" name="locationType" id="pickup">
+  <label class="form-check-label fw-semibold" for="pickup">Pickup</label>
+</div>
+</div>
+
+
+<p class="mb-2 fw-semibold">Where do you want us to deliver?</p>
+
+<div class="row g-2 align-items-center">
+<div class="col-md-3">
+  <button class="btn btn-dark w-100 d-flex align-items-center justify-content-center gap-2">
+    <i class="bi bi-geo-alt"></i>
+    Current Location
+  </button>
+</div>
+<div class="col-md-6">
+  <input type="text" class="form-control" placeholder="Search locality or street name">
+</div>
+<div class="col-md-3">
+  <button class="btn btn-success w-100">Confirm</button>
+</div>
+</div>
+
+<!-- Divider -->
+<hr class="mt-4"/>
+
+<!-- Skip Button -->
+<div class="text-center">
+<button class="btn btn-success px-4" data-bs-dismiss="modal">Skip For Now</button>
+</div>
+<!-- Note -->
+<p class="text-center mt-3 small text-muted">
+Note: Product availability, prices, and delivery options will vary based on the delivery location!
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="d-flex  calls   ">
+<a class="phonenum " href="tel:+916383031374"><i class="bi bi-headset ms-3"></i><span class="phonenum ms-2 "><a class="phonenum" href="tel:+916383031374">6383031374</a></span>
+<a href="#" class=" homebutton ms-2 ">Login<i class="bi bi-person-fill"></i></a>
+</div>
+</div>
+
+<!--navbar for lab-->
+<div class="navigationbarforlab" id="navlab">
+<nav class="navbar navbar-expand-lg navigationbar">
+<div class="container-fluid">
+<a class="navbar-brand" href="#"><img src="./images/marketlogo.jpg" alt="" style="width: 100px; height:70px" class="market-logo"></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav  mb-2 mb-lg-0 ">
+</li> 
+<div class="dropdown-wrapper">
+    <div class="main-btn mt-3 ">Shop by Category<i class="bi bi-chevron-down ms-1" ></i></div>
+    <!-- LEFT MENU -->
+     <div class="overallmenus z-3 position-absolute ">
+    <div class="left-menu">
+        <a class="left-item" data-target="snacks">Snacks</a>
+        <a class="left-item" data-target="beverages">Beverages</a>
+        <a class="left-item" data-target="stationery">Stationery</a>
+        <a class="left-item" data-target="oral">Oral Care</a>
+        <a class="left-item" data-target="oral">Oral Care</a>
+    </div>
+    <!-- RIGHT MENU -->
+        <div class="right-menu">
+          <div class="sub-box"id="snacks">
+            <a href="#">All Snacks</a>
+            <a href="#">Chips</a>
+            <a href="#">Biscuits</a>
+        </div>
+
+        <div class="sub-box" id="beverages">
+            <a href="#">All Beverages</a>
+            <a href="#">Juice</a>
+            <a href="#">Soft Drinks</a>
+        </div>
+
+        <div class="sub-box" id="stationery">
+            <a href="#">All</a>
+            <a href="#">Pens & Pencils</a>
+            <a href="#">Scissors & Glue</a>
+        </div>
+
+        <div class="sub-box" id="oral">
+            <a href="#">Toothpaste</a>
+            <a href="#">Brush</a>
+            <a href="#">Mouthwash</a>
+        </div>
+        </div>
+        <!--addd element here-->
+    </div>
+
+</div>
+<!---->
+<li  class="nav-item mt-3 hovergreen" >
+<a class="nav-link" aria-current="page" href="#">Home</a>
+</li>
+<li class="nav-item hovergreen">
+<a class="nav-link mt-3 " href="#">Deals</a>
+</li>
+<li class="nav-item hovergreen">
+<a class="nav-link mt-3" href="#">New products</a>
+</li>
+
+</ul>
+</div> 
+<form class="d-flex" role="search">
+  <div class="search-box me-3 ">  
+    <i class='bx  bx-search-big mt-1 me-2 searchicons' style='color:#7a7a7a'></i> 
+      <input type="text" class="search-input" placeholder="Search what you want ?">
+      <button class="search-btn ms-5">Search</button>
+    </div>
+<i class='bx  bx-cart carticon ' style='color:#545353'></i> 
+<span class="quantity me-5">0</span>
+</form>
+</div>
+</div>
+</nav>
+<!--whatsappchats-->
+      <div class="whatsappcontact d-none d-lg-block">
+      <a href="https://wa.me/916383031374" target="_blank" class="whatsapp-btn">
+      <span>Click to chat</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp">
+      </a>
+      </div>
+<!-- Scroll to Top Button -->
+  <i class="bi bi-arrow-up sm-me-5" id="topBtn"></i>
+<!---->
+  <!-- WhatsApp floating button -->
+   <div class="mobilewhatsapp">
+  <a href="https://wa.me/6383031374" target="_blank" class="whatsapp-fab" aria-label="Whatsapp">
+    <span class="wa-icon"><i class="bi bi-whatsapp"></i></span>
+    <span class="d-none d-sm-inline">Click to chat</span>
+  </a>
+  </div>
+   <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" id="arrowscroll">
+    <i class="bi bi-arrow-up fs-5" style="color:var(--accent)"></i>
+  </button>
+
+
+<!---->
+<!--navbarformobile-->
+<div class="mobilenavbar">
+<nav class="p-2  text-white d-block d-md-none d-flex">
+  <span style="font-size:26px; cursor:pointer;" onclick="openMenu()" class="mt-2">☰</span>
+  <div class="mobileviewsearch d-flex ">
+
+    <img class="mobilemarketlogo ms-3" src="./images/marketlogo.jpg" alt="" style="height: 50px; width:70px">
+  <div class=" mobile-search-option  ms-4 mt-2 d-flex">  
+      <input type="text" class="mobile-searchbaaring" placeholder="Search...">
+      <button class="  mobile-searchbutton "><i class="bi bi-search"></i></button>
+      </div>
+       <div class="mobilequntity d-flex ms-5">
+        <span> <i class='bx  bx-cart carticon mt-2' style='color:#ffff'></i> </span>
+       <span class="quantity mt-1">0</span>
+       </div>
+  </div>
+</nav>
+</div>
+  
+
+<!-- MOBILE SIDEBAR -->
+<div id="mobileMenu">
+
+  <!-- Close X -->
+  <span class="close-btn" ><i class="bi bi-x-lg" onclick="closeMenu()"></i></span>
+
+  <!-- MAIN MENU -->
+  <div id="mainMenu">
+    <h5 class="mb-3">Menu</h5>
+    <button class="btn btn-light w-100 text-start mb-2" onclick="openSubMenu()">
+      Category →
+    </button>
+    <button class="btn btn-light w-100 text-start">Offers</button>
+    <button class="btn btn-light w-100 text-start mt-2">Orders</button>
+  </div>
+  <div id="categoryMenu">
+    <span class="back-btn" onclick="closeSubMenu()">Back</span>
+    <button class="btn btn-light w-100 text-start mb-2">Mobiles</button>
+    <button class="btn btn-light w-100 text-start mb-2">Grocery</button>
+    <button class="btn btn-light w-100 text-start mb-2">Home Appliances</button>
+  </div>
+</div>
+
+<!---->
+<!--headersection-close--->
+<section style="height: 800px;width: 100px;">
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footersection">
+    <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- LEFT: Logo + address -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo mb-3">
+            <!-- Replace with real logo -->
+            <img src="./images/footermarketlogo.jpg" class="market-logo">
+          </div>
+          <div class="text-muted" style="max-width:280px;">
+            Thirchy Road,Sulur<br>
+            Coimbatore,<br>
+            Tamil Nadu - 641108
+          </div>
+        </div>
+
+        <!-- CENTER: Need Help -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-3">Need Help</h5>
+
+          <div class="help-block">
+            <div class="phone">
+              <span class="fs-4 text-success"><a class="phonenum" href="tel:+916383031374"><i class="bi bi-headset fs-1"></i></a></span>
+              <span><a href="tel:+916383031374">6383031374</a></span>
+            </div>
+
+            <div class="help-divider" aria-hidden="true"></div>
+
+            <div class="email">
+              <span class="fs-5"><i class="bi bi-envelope"></i></span>
+              <span class="small"> <a href="mailto:krishnanraja021@gmail.com">Krishnanraja021@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Categories & Links -->
+        <div class="col-lg-4 col-md-12">
+          <h5 class="fw-bold mb-3">Categories</h5>
+
+          <div class="categories d-flex flex-wrap">
+            <a href="#">Montectio Specials</a>
+            <span class="text-muted">|</span>
+            <a href="#">Deals of the Month</a>
+            <span class="text-muted">|</span>
+            <a href="#">Cooking Essentials</a>
+            <span class="text-muted">|</span>
+            <a href="#">Ready to Cook</a>
+            <span class="text-muted">|</span>
+            <a href="#">Dry Fruits</a>
+            <span class="text-muted">|</span>
+            <a href="#">Fruits &amp; Veggies</a>
+            <span class="text-muted">|</span>
+            <a href="#">Personal Care</a>
+            <!-- add more as needed -->
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="small">
+              <a href="#" class="me-2">Home</a>
+              <a href="#" class="me-2">Deals</a>
+              <a href="#">New Arrivals</a>
+            </div>
+
+            <div class="social-media">
+              <a class="social-btn me-2" href="#" title="facebook"><i class="bi bi-facebook fs-5"></i></a>
+              <a class="social-btn" href="#" title="instagram"><i class="bi bi-instagram fs-5"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom links -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+        <div class="small text-muted">
+          <a href="#" class="me-3">Privacy Policy</a>
+          <a href="#" class="me-3">Refund Policy</a>
+          <a href="#" class="me-3">Terms and Condition</a>
+        </div>
+
+        <div class="text-muted small mt-3 mt-md-0">
+          © 2025 Montectio Supermarket. All Right Reserved
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+<script src="dealspage.js"></script>

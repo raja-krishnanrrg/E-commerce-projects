@@ -61,7 +61,7 @@ document.getElementById("categoryMenu").style.display = "none";
 let navbarforlab=document.getElementById("navlab");
 let topBtn = document.getElementById("topBtn");
 window.onscroll = function () {
-if (document.documentElement.scrollTop > 150) {
+if (document.documentElement.scrollTop > 10) {
 topBtn.style.display = "flex";
 navbarforlab.style.marginTop="-40px"
 } else {
@@ -75,6 +75,8 @@ top: 0,
 behavior:"smooth"
 });
 };
+//navbarjsover
+
 // Every wonders js 
 let glow =document.getElementById("glowimage");
 let glowtext=document.getElementById("glowtext");
@@ -118,7 +120,7 @@ divinetext.style.display="none"
 let fabricimage=document.getElementById("fabricimage");
 let fabrictext=document.getElementById("fabrictext");
 
-fabricimage.addEventListener( "mouseenter",()=>{
+fabricimage.addEventListener("mouseenter",()=>{
 fabrictext.style.display="block"
 });
 fabricimage.addEventListener("mouseleave",()=>{
@@ -179,7 +181,7 @@ soothingtext.style.display="none"
 });
 
 
-//homepageadtocart
+//homepageadtocart start
 
 const homeProductData = {
 infant: [
@@ -222,6 +224,8 @@ men: [
 ],
 };
 
+
+//home add to cart content
 const slider = document.getElementById("productSlider");
 // LOAD PRODUCTS FUNCTION
 function loadProducts(cat) {
@@ -264,8 +268,11 @@ cart.innerHTML=`<i class="bi bi-cart-plus"></i>`
 }
 })
 cart.addEventListener("mouseleave",()=>{
-cart.innerHTML=`ADD TO CART`
+cart.innerHTML=`Add to Cart`
 })
 })
 
-}
+};
+
+// home add to cart over
+

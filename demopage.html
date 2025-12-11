@@ -1,231 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Footer - Arthi style</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Product Page</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    :root{
-      --arthi-bg: #f3f5ea; /* pale/cream background similar to screenshot */
-      --muted: #6b6b5f;
-      --accent: #1f9a4b;
-      --footer-gap: 40px;
+<style>
+    body {
+        background: #fdfcf5;
     }
 
-    body { margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-
-    /* Footer base */
-    .site-footer{
-      background: var(--arthi-bg);
-      color: #1a1a1a;
-      padding-top: 48px;
-      padding-bottom: 36px;
-      border-top: 1px solid rgba(0,0,0,0.04);
+    /* Sidebar */
+    .sidebar-box {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        height: 85vh;
+        overflow-y: auto;
     }
 
-    .site-footer a { color: inherit; text-decoration: none; }
-    .site-footer a:hover { text-decoration: underline; }
-
-    /* Logo & address */
-    .footer-logo img { max-width: 140px; height: auto; display:block; }
-
-    /* Need Help block */
-    .help-block .phone {
-      display:flex;
-      gap:12px;
-      align-items:center;
-      font-weight:600;
-      font-size:1.05rem;
-      color: #0f5132;
-    }
-    .help-block .email {
-      display:flex;
-      gap:10px;
-      align-items:center;
-      color: var(--muted);
-      margin-top:14px;
-    }
-    .help-divider{
-      height:1px;
-      background: rgba(0,0,0,0.06);
-      margin: 18px 0;
+    .sidebar-search {
+        background: #f3f3f3;
+        border-radius: 10px;
+        padding: 8px 12px;
+        width: 100%;
+        border: none;
+        margin-bottom: 15px;
     }
 
-    /* Categories column - make items wrap */
-    .categories a { margin-right: .5rem; margin-bottom: .25rem; white-space: nowrap; color: var(--muted); font-size:.95rem; }
-
-    /* bottom row */
-    .footer-bottom { padding-top: 18px; padding-bottom: 6px; border-top: 1px solid rgba(0,0,0,0.04); margin-top: 20px; }
-
-    .social-btn { width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
-
-    /* WhatsApp floating button */
-    .whatsapp-fab{
-      position: fixed;
-      right: 18px;
-      bottom: 86px;
-      z-index: 1100;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      background: #fff;
-      padding: 8px 12px;
-      border-radius: 28px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      border: 2px solid #1f9a4b;
-      align-items:center;
-      font-weight:600;
-      color: #1f9a4b;
-    }
-    .whatsapp-fab .wa-icon{
-      background: #1f9a4b;
-      color: white;
-      width:36px;
-      height:36px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      font-size:1.1rem;
+    /* Product Card */
+    .product-card {
+        background: white;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: 0.3s;
     }
 
-    /* Scroll-top circle */
-    .scroll-top {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width:46px;
-      height:46px;
-      border-radius:50%;
-      background: white;
-      border: 2px solid #1f9a4b;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 6px 18px rgba(0,0,0,0.12);
-      z-index: 1100;
+    .product-card:hover {
+        transform: translateY(-4px);
     }
 
-    /* Responsive tweaks */
-    @media (max-width: 767.98px) {
-      .site-footer { padding-top: 28px; padding-bottom: 28px; }
-      .categories { margin-top: 10px; }
-      .whatsapp-fab { right: 12px; bottom: 92px; padding: 6px 10px; }
+    .product-img {
+        width: 100%;
+        height: 160px;
+        object-fit: contain;
     }
-  </style>
+
+    .discount-badge {
+        background: #d6250f;
+        color: white;
+        padding: 4px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        width: fit-content;
+        margin-bottom: 10px;
+    }
+
+    .price-old {
+        text-decoration: line-through;
+        color: #888;
+    }
+
+    .price-new {
+        font-weight: bold;
+        color: #d6250f;
+    }
+
+    .add-btn {
+        background: #a4cf32;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        font-weight: bold;
+        margin-top: 12px;
+    }
+
+    .add-btn:hover {
+        background: #8bb528;
+    }
+</style>
+
 </head>
 <body>
 
-  <!-- PAGE CONTENT SAMPLE -->
-  <main style="min-height:70vh;"></main>
+<div class="container-fluid mt-4">
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row gy-4">
+    <div class="row">
 
-        <!-- LEFT: Logo + address -->
-        <div class="col-lg-4 col-md-6">
-          <div class="footer-logo mb-3">
-            <!-- Replace with real logo -->
-            <img src="https://via.placeholder.com/140x60?text=arthi+logo" alt="Arthi logo">
-          </div>
-          <div class="text-muted" style="max-width:280px;">
-            Sri Ram Avenue, Coimbatore,<br>
-            Coimbatore,<br>
-            Tamil Nadu - 641108
-          </div>
+        <!-- SIDEBAR -->
+        <div class="col-12 col-md-3 col-lg-3 mb-4">
+            <div class="sidebar-box">
+                <h5 class="fw-bold">Brands</h5>
+                <hr>
+                
+                <input type="text" class="sidebar-search" placeholder="Search brand...">
+
+                <!-- Brand list -->
+                <div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">Kara</label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">Brooke Bond Taj Mahal</label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">Concord</label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">Ruchi Gold</label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">Sangu</label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">Comfy</label>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <!-- CENTER: Need Help -->
-        <div class="col-lg-4 col-md-6">
-          <h5 class="fw-bold mb-3">Need Help</h5>
+        <!-- PRODUCT GRID -->
+        <div class="col-12 col-md-9 col-lg-9">
 
-          <div class="help-block">
-            <div class="phone">
-              <span class="fs-4 text-success"><i class="bi bi-headset"></i></span>
-              <span>9626522266</span>
+            <h4 class="fw-bold mb-3">Deals</h4>
+
+            <div class="row g-4">
+
+                <!-- Product 1 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="discount-badge">₹ 714 OFF</div>
+                        <img src="https://via.placeholder.com/200" class="product-img" alt="No Image">
+                        <h6 class="mt-2">Terra Greens Coriander Powder</h6>
+                        <p>100 gm</p>
+                        <p>
+                            <span class="price-old">₹790</span>
+                            <span class="price-new ms-2">₹76.5</span>
+                        </p>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="discount-badge">53% OFF</div>
+                        <img src="https://via.placeholder.com/200" class="product-img">
+                        <h6 class="mt-2">Annapoorna Chilly Powder</h6>
+                        <select class="form-select form-select-sm my-2">
+                            <option>50 gm</option>
+                            <option>100 gm</option>
+                        </select>
+                        <p>
+                            <span class="price-old">₹30</span>
+                            <span class="price-new ms-2">₹14</span>
+                        </p>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="discount-badge">₹ 529 OFF</div>
+                        <img src="https://via.placeholder.com/200" class="product-img">
+                        <h6 class="mt-2">RYCA Olive Pomace Oil</h6>
+                        <p>1 Ltr</p>
+                        <p>
+                            <span class="price-old">₹999</span>
+                            <span class="price-new ms-2">₹470</span>
+                        </p>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="discount-badge">53% OFF</div>
+                        <img src="https://via.placeholder.com/200" class="product-img">
+                        <h6 class="mt-2">Mambalam Iyers Pepper Rasam</h6>
+                        <p>200 gm</p>
+                        <p>
+                            <span class="price-old">₹99</span>
+                            <span class="price-new ms-2">₹47</span>
+                        </p>
+                        <button class="add-btn">Add to Cart</button>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="help-divider" aria-hidden="true"></div>
-
-            <div class="email">
-              <span class="fs-5"><i class="bi bi-envelope"></i></span>
-              <span class="small">arthismordervadavalli@gmail.com</span>
-            </div>
-          </div>
         </div>
 
-        <!-- RIGHT: Categories & Links -->
-        <div class="col-lg-4 col-md-12">
-          <h5 class="fw-bold mb-3">Categories</h5>
-
-          <div class="categories d-flex flex-wrap">
-            <a href="#">Arthi Specials</a>
-            <span class="text-muted">|</span>
-            <a href="#">Deals of the Month</a>
-            <span class="text-muted">|</span>
-            <a href="#">Cooking Essentials</a>
-            <span class="text-muted">|</span>
-            <a href="#">Ready to Cook</a>
-            <span class="text-muted">|</span>
-            <a href="#">Dry Fruits</a>
-            <span class="text-muted">|</span>
-            <a href="#">Fruits &amp; Veggies</a>
-            <span class="text-muted">|</span>
-            <a href="#">Personal Care</a>
-            <!-- add more as needed -->
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center mt-3">
-            <div class="small">
-              <a href="#" class="me-2">Home</a>
-              <a href="#" class="me-2">Deals</a>
-              <a href="#">New Arrivals</a>
-            </div>
-
-            <div>
-              <a class="social-btn me-2" href="#" title="facebook"><i class="bi bi-facebook fs-5"></i></a>
-              <a class="social-btn" href="#" title="instagram"><i class="bi bi-instagram fs-5"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- bottom links -->
-      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
-        <div class="small text-muted">
-          <a href="#" class="me-3">Privacy Policy</a>
-          <a href="#" class="me-3">Refund Policy</a>
-          <a href="#" class="me-3">Terms and Condition</a>
-        </div>
-
-        <div class="text-muted small mt-3 mt-md-0">
-          © 2025 Arthi Supermarket. All Right Reserved
-        </div>
-      </div>
     </div>
-  </footer>
+</div>
 
-  <!-- WhatsApp floating button -->
-  <a href="https://wa.me/919626522266" target="_blank" class="whatsapp-fab" aria-label="Whatsapp">
-    <span class="wa-icon"><i class="bi bi-whatsapp"></i></span>
-    <span class="d-none d-sm-inline">Click to chat</span>
-  </a>
-
-  <!-- Scroll to top -->
-  <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
-    <i class="bi bi-arrow-up fs-5" style="color:var(--accent)"></i>
-  </button>
-
-  <!-- Bootstrap JS (optional) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
