@@ -16,8 +16,8 @@
 }
 
 .navigationbarforlab{
-   
-   margin-top: -5px;
+   z-index: 2;
+   margin-top: -8px;
 }
 .whatsappcontact{
     overflow: hidden;
@@ -46,7 +46,7 @@
     font-weight:bolder;
     font-style: bold;
 }
-#toglebutton:hover{
+#toglebutton i:hover{
     color: #04d167;
 }
 
@@ -130,6 +130,7 @@
 }
 .mobilenavbar{
     background-color: #00a651;
+    margin-top: -8px;
 }
 /*navbar for mobile*/
 #mobileMenu {

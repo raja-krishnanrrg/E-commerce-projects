@@ -66,7 +66,7 @@ topBtn.style.display = "flex";
 navbarforlab.style.marginTop="-55px"
 } else {
 topBtn.style.display = "none";
-navbarforlab.style.marginTop="-5px"
+navbarforlab.style.marginTop="-8px"
 }
 };
 topBtn.onclick = function () {
