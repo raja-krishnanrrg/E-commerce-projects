@@ -124,6 +124,9 @@
     background-color: #00a651;
 }
 /*navbar for mobile*/
+.mobilequntity{
+    margin-left: 55%;
+}
 #mobileMenu {
       position: fixed;
       top: 0;

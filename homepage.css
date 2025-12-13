@@ -3,7 +3,8 @@
     margin: 0px;
     padding: 0px;
     background-position: fixed;
-    font-family: 'Poppins', sans-serif;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: bold;
     user-select: none;
 }
 /*css for drop down delivery options*/
@@ -15,7 +16,8 @@
 }
 
 .navigationbarforlab{
-    z-index: 2;
+   
+   margin-top: -5px;
 }
 .whatsappcontact{
     overflow: hidden;
@@ -26,14 +28,10 @@
     font-style: bold;
     color: #fff;
 }
-.deliverycontainer{
-    background-color:#1ea117 ;
-    height: 35px;
-    width: auto;
-    font-family: Arial, Helvetica, sans-serif;
-       font-weight:bolder;
-    font-style: bold;
+.carticon{
+    font-size: small;
 }
+
 .deliverypicks{
     background: #0e510b;
     border: none;
@@ -44,6 +42,13 @@
     height: auto;
 }
 
+#toglebutton{
+    font-weight:bolder;
+    font-style: bold;
+}
+#toglebutton:hover{
+    color: #04d167;
+}
 
 /*above content of nav bar*/
 .calls{
@@ -99,15 +104,17 @@
 .mobilewhatsapp{
     display:block;
 }
- .navigationbarforlab{
-        
-    }
+
     .deliverycontainer{
         overflow: hidden;
     }
       .mobileviewsearch {
         width: 60%;
-     } 
+     }    
+    .mobilequntity{
+        margin-left:55%;
+    }
+    
 }
 
 .toglebutton {
@@ -252,6 +259,7 @@
 }
 .homebanners{
     overflow: hidden;
+    margin-top: -5px;
 }
 /* search bar css*/
  .search-box {

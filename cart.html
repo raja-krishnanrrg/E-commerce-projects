@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add to Cart</title>
+
+<style>
+    body{
+        font-family: Arial;
+        padding:20px;
+    }
+
+    .products{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap:20px;
+    }
+
+    .card{
+        border:1px solid #ddd;
+        padding:15px;
+        border-radius:10px;
+        text-align:center;
+    }
+
+    .card img{
+        width:100%;
+        height:150px;
+        object-fit:cover;
+        border-radius:8px;
+    }
+
+    .cart-box{
+        margin-top:40px;
+        padding:20px;
+        border:2px solid #444;
+        border-radius:10px;
+    }
+
+    .cart-item{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin-bottom:15px;
+        border-bottom:1px solid #ccc;
+        padding-bottom:10px;
+    }
+
+    .qty-btn{
+        padding:5px 10px;
+        cursor:pointer;
+        font-size:18px;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>🛒 Products</h2>
+
+<div id="productList" class="products"></div>
+
+<h2>🛍 Your Cart</h2>
+
+<div id="cart" class="cart-box"></div>
+
+<script>
+    // ==========================
+    // 1. Product Data
+    // ==========================
+    const products = [
+        { id: 1, name: "Perfume Bottle", price: 399, img: "./images/dryfruits.jpg" },
+        { id: 2, name: "Headphones", price: 999, img: "./images/fruits.jpg" },
+        { id: 3, name: "Shoes", price: 799, img: "./images/snacks.jpg" },
+        { id: 4, name: "Smart Watch", price: 1299, img: "./images/stationary.jpg" }
+    ];
+
+    // Cart Array
+    let cart = [];
+
+    // ==========================
+    // 2. Show Products
+    // ==========================
+    function showProducts(){
+        let html = "";
+        products.forEach(p => {
+            html += `
+                <div class="card">
+                    <img src="${p.img}">
+                    <h3>${p.name}</h3>
+                    <p>₹${p.price}</p>
+                    <button onclick="addToCart(${p.id})">Add to Cart</button>
+                </div>
+            `;
+        });
+        document.getElementById("productList").innerHTML = html;
+    }
+    showProducts();
+
+    // ==========================
+    // 3. Add to Cart
+    // ==========================
+    function addToCart(id){
+        let item = products.find(p => p.id === id);
+
+        let exist = cart.find(c => c.id === id);
+
+        if(exist){
+            exist.qty++;
+        }else{
+            cart.push({ ...item, qty: 1 });
+        }
+
+        updateCart();
+    }
+
+    // ==========================
+    // 4. Update Cart
+    // ==========================
+    function updateCart(){
+        let html = "";
+
+        if(cart.length === 0){
+            html = "<p>Your cart is empty</p>";
+        } else {
+            cart.forEach(item => {
+                html += `
+                    <div class="cart-item">
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>₹${item.price}</p>
+                        </div>
+                        <div>
+                            <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
+                            <span> ${item.qty} </span>
+                            <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        document.getElementById("cart").innerHTML = html;
+    }
+
+    // ==========================
+    // 5. Increase / Decrease Qty
+    // ==========================
+    function changeQty(id, change){
+        let item = cart.find(c => c.id === id);
+
+        item.qty += change;
+
+        if(item.qty <= 0){
+            cart = cart.filter(c => c.id !== id);
+        }
+
+        updateCart();
+    }
+</script>
+
+</body>
+</html>
+
+
+

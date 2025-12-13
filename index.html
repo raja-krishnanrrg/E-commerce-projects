@@ -12,14 +12,12 @@
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <div class="overallheadercontainer">
-<div class="deliverycontainer">
-  <span class="text-light ms-2">Home</span>
-<span class="ms-3 slash">|</span>
-<i class="bi bi-geo-alt ps-1 text-light"></i>
-<button class="btn btn toglebutton text-light  " data-bs-toggle="modal" data-bs-target="#locationModal" style="border: none;" >
-Delivery To : Sulur <i class="bi bi-chevron-down downarrowicon"></i>  
-</button>
-
+    <marquee behavior="" direction="" style="height: 45px; width:100%;background-color:rgb(213, 224, 2)">
+    <div class="pt-2">
+      Right from Fresh Fruits & Vegetables, Rice & Dals, Spices & Seasonings to Packaged products, Bakery Products, Beverages – We have it all !
+      </div>
+  </marquee>
+<div class="deliverytoogle">
 <!-- Location Modal -->
 <div class="modal fade" id="locationModal" tabindex="-1">
 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -74,17 +72,11 @@ Delivery To : Sulur <i class="bi bi-chevron-down downarrowicon"></i>
 <p class="text-center mt-3 small text-muted">
 Note: Product availability, prices, and delivery options will vary based on the delivery location!
 </p>
-
 </div>
 </div>
 </div>
 </div>
 
-<div class="d-flex  calls   ">
-<a class="phonenum " href="tel:+916383031374"><i class="bi bi-headset ms-3"></i><span class="phonenum ms-2 "><a class="phonenum" href="tel:+916383031374">6383031374</a></span>
-<a href="#" class=" homebutton ms-2 ">Login<i class="bi bi-person-fill"></i></a>
-</div>
-</div>
 
 <!--navbar for lab-->
 <div class="navigationbarforlab" id="navlab">
@@ -97,6 +89,13 @@ Note: Product availability, prices, and delivery options will vary based on the 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav  mb-2 mb-lg-0 ">
 </li> 
+
+<!---->
+<button class="btn btn toglebutton text-dark  " data-bs-toggle="modal" data-bs-target="#locationModal" style="border: none;" id="toglebutton">
+ <i class="bi bi-geo-alt-fill me-2"></i>Choose your location
+</button>
+
+<!---->
 <div class="dropdown-wrapper">
     <div class="main-btn mt-3 ">Shop by Category<i class="bi bi-chevron-down ms-1" ></i></div>
     <!-- LEFT MENU -->
@@ -145,24 +144,24 @@ Note: Product availability, prices, and delivery options will vary based on the 
 <li class="nav-item hovergreen">
 <a class="nav-link mt-3 " href="#">Deals</a>
 </li>
-<li class="nav-item hovergreen">
-<a class="nav-link mt-3" href="#">New products</a>
-</li>
-
 </ul>
 </div> 
-<form class="d-flex" role="search">
-  <div class="search-box me-3 ">  
+<form class="d-flex " role="search">
+  <div class="search-box  ">  
     <i class='bx  bx-search-big mt-1 me-2 searchicons' style='color:#7a7a7a'></i> 
       <input type="text" class="search-input" placeholder="Search what you want ?">
       <button class="search-btn ms-5">Search</button>
     </div>
-<i class='bx  bx-cart carticon ' style='color:#545353'></i> 
-<span class="quantity me-5">0</span>
+    <div class="d-flex">
+    <a href="#" class=" homebutton mt-2 " style="color: black;">Login<i class="bi bi-person-fill" style="color:black;"></i></a>
+<i class='bx  bx-cart carticon ' style='color:black'></i> 
+</div>
+<span class="quantity ">0</span>
 </form>
 </div>
-</div>
+
 </nav>
+</div>
 <!--whatsappchats-->
       <div class="whatsappcontact d-none d-lg-block">
       <a href="https://wa.me/916383031374" target="_blank" class="whatsapp-btn">
@@ -188,20 +187,28 @@ Note: Product availability, prices, and delivery options will vary based on the 
 <!---->
 <!--navbarformobile-->
 <div class="mobilenavbar">
-<nav class="p-2  text-white d-block d-md-none d-flex">
-  <span style="font-size:26px; cursor:pointer;" onclick="openMenu()" class="mt-2">☰</span>
-  <div class="mobileviewsearch d-flex ">
-
-    <img class="mobilemarketlogo ms-3" src="./images/marketlogo.jpg" alt="" style="height: 50px; width:70px">
-  <div class=" mobile-search-option  ms-4 mt-2 d-flex">  
-      <input type="text" class="mobile-searchbaaring" placeholder="Search...">
-      <button class="  mobile-searchbutton "><i class="bi bi-search"></i></button>
-      </div>
-       <div class="mobilequntity d-flex ms-5">
+<nav class="p-2  text-white d-block d-md-none ">
+   <div class="d-flex">
+  <span style="font-size:26px; cursor:pointer;"onclick="openMenu()" class="mt-2">☰</span>
+ 
+  <img class="mobilemarketlogo ms-3" src="./images/marketlogo.jpg" alt="" style="height: 50px; width:70px">
+  <div class="mobilequntity d-flex ">
         <span> <i class='bx  bx-cart carticon mt-2' style='color:#ffff'></i> </span>
        <span class="quantity mt-1">0</span>
        </div>
-  </div>
+       </div>
+  <div class="mobileviewsearchbar  ">
+  
+     <div class="search-box me-3 ">  
+    <i class='bx  bx-search-big mt-1 me-2 searchicons' style='color:#7a7a7a'></i> 
+      <input type="text" class="search-input" placeholder="Search what you want ?">
+      <button class="search-btn ms-5">Search</button>
+    </div>
+    </div>
+  <!-- <div class=" mobile-search-option  ms-4 mt-2 d-flex">  
+      <input type="text" class="mobile-searchbaaring" placeholder="Search...">
+      <button class="  mobile-searchbutton "><i class="bi bi-search"></i></button>
+      </div> -->
 </nav>
 </div>
   
@@ -599,7 +606,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
                         <div class="recipes d-flex align-items-center me-3 mt-3">
                               <div class="category-item">
                           <img src="./images/bath needs.jpg" alt="" id="">
-                         <h1  class="overflowtext">Bath needs</h1>
+                         <h1  class="overflowtext ">Bath needs</h1>
                           </div>
                         </div>
 
@@ -653,7 +660,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                 <div class="category-item">
                     <img src="./images/bath needs.jpg" alt="" id="bathneedimage">
-                    <div class="category-title" id="bathtext">Bath needs</div>
+                    <div class="category-title ms-4" id="bathtext">Bath needs</div>
                 </div>
             </div>
 
@@ -693,7 +700,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
 </div>
 
 
-</div> -->
+</div>-->
 
 <div class="smartshoppy">
       <img src="./images/smart shoppers.jpg" alt="scrolling" style="width: 100%;">
@@ -790,6 +797,6 @@ Note: Product availability, prices, and delivery options will vary based on the 
   </footer>
 
 
-<script src="homepage.js"></script>
+<script src="./javascriptfolder/homepage.js"></script>
 </body>
 </html>
