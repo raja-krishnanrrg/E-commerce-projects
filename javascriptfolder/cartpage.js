@@ -4,7 +4,23 @@ function updateCart() {
     let html = "";
 
     if (cart.length === 0) {
-        html = "<p>Your cart is empty</p>";
+        html = `<div class="container">
+  <div class="row  align-items-center">
+    <div class="col-12 text-center empty-cart">
+
+      <img src="./images/emptycartgif.gif" alt="Empty cart" class=" Emptycart">
+
+      <h4 class="mt-4 fw-bold">YOUR CART IS EMPTY</h4>
+      <p class="text-muted mb-4">Let's find something you'll love</p>
+
+      <a href="index.html" class="shop-btn">
+        <i class="bi bi-bag"></i> Continue Shopping
+      </a>
+
+    </div>
+  </div>
+</div>`;
+document.getElementById("Shopping").style.display="none";
     }
 
     cart.forEach((item, index) => {

@@ -83,96 +83,62 @@ behavior:"smooth"
 
 
 const freshfruitsproducts=[{
-    id:1,
-    name:"Blueberry",
-    image:"./freshfruitsimages/blueberry.jpg",
-    price:290,
+    id:21,
+    name:"DarkFanstasy",
+    image:"./cookiesimages/darkfantasy.jpg",
+    price:120,
 
 },{
-    id:2,
-    name:"Apple",
-    image:"./freshfruitsimages/apple royal gala.jpeg",
-    price:379,
+    id:22,
+    name:"Chaco Brownie",
+    image:"./cookiesimages/chacobrownie.jpg",
+    price:65,
 },{
-    id:3,
-    name:"apricots",
-    image:"./freshfruitsimages/Apricots.png",
-    price:259,
+    id:23,
+    name:"Happy happy",
+     image:"./cookiesimages/hapyhapy.jpg",
+    price:20,
 
 },{
-    id:4,
-    name:"longonfruit",
-     image:"./freshfruitsimages/longon fruit.jpg",
-     price:355,
+    id:24,
+    name:"Hide & Seek",
+      image:"./cookiesimages/hideandseek.png",
+     price:80,
 },{
-    id:5,
-    name:"papayasalad",
-      image:"./freshfruitsimages/papaya salad.jpg",
-     price:200,
+    id:25,
+    name:"Littleheart",
+      image:"./cookiesimages/littleheart.jpg",
+     price:60,
 },{
-       id:6,
-    name:"pineapple",
-      image:"./freshfruitsimages/pineapple.jpg",
-     price:288,
+       id:26,
+    name:"MariGold",
+       image:"./cookiesimages/marigold.jpg",
+     price:40,
 
 },{
-      id:7,
-     name:"pomegranate",
-      image:"./freshfruitsimages/pomegranate salad 1pac.jpg",
-     price:350,
+      id:27,
+     name:"Mejiyjaan",
+     image:"./cookiesimages/majiyaan.jpg",
+     price:19,
     
 },{
-      id:8,
-     name:"Redpears",
-      image:"./freshfruitsimages/redpears.jpg",
-     price:250,
+      id:28,
+     name:"PureMagic",
+      image:"./cookiesimages/milkbikies.jpg",
+     price:80,
     
 },{
-        id:9,
-     name:"Guava",
-      image:"./freshfruitsimages/thailand guava.jpg",
-     price:180,
+        id:29,
+     name:"Milkbies",
+      image:"./cookiesimages/puremagic.jpg",
+     price:30,
 },{
-    id:10,
-    name:"watermelon",
-      image:"./freshfruitsimages/watermelon.jpg",
-     price:280,
+    id:30,
+    name:"Treat",
+    image:"./cookiesimages/treat.jpg",
+     price:70,
 }];
 
-
-
-
-// function showProducts() {
-//     let freshfruitscontainer = " ";
-
-//     freshfruitsproducts.forEach(fruits => {
-//         freshfruitscontainer += `
-//         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-//             <div class="card product-card h-100 text-center p-3">
-
-//                 <img src="${fruits.image}" class="card-img-top img-fluid" alt="${fruits.name}">
-
-//                 <div class="card-body">
-//                     <h6>${fruits.name}</h6>
-
-//                     <select class="form-select mb-2">
-//                         <option>1 Pc</option>
-//                     </select>
-
-//                     <p class="fw-bold text-success mb-3">₹ ${fruits.price}</p>
-
-//                     <button class="btn btn-outline-success add-btn">+</button>
-//                 </div>
-
-//             </div>
-//         </div>
-//         `;
-//     });
-
-//     document.getElementById("freshfruitscontainer").innerHTML = freshfruitscontainer;
-// }
-
-//showProducts();
 
 
 function showProducts(products){
@@ -270,8 +236,21 @@ cart.innerHTML=`Add to Cart`
 
 function updateCartBadge() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
   let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
   document.getElementById("cartCount").innerText = totalQty;
-     document.getElementById("mobilenavbarquantity").innerText = totalQty;
 }
 updateCartBadge()
+
+
+//navbartcartupdate
+function updateCartBadge() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+  document.getElementById("cartCount").innerText = totalQty;
+     document.getElementById("").innerText = totalQty;
+}
+updateCartBadge()
+
+

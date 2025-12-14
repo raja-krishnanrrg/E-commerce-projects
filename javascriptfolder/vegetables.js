@@ -83,96 +83,62 @@ behavior:"smooth"
 
 
 const freshfruitsproducts=[{
-    id:1,
-    name:"Blueberry",
-    image:"./freshfruitsimages/blueberry.jpg",
-    price:290,
+    id:11,
+    name:"tomato",
+    image:"./vegetablesimage/tomato.jpg",
+    price:100,
 
 },{
-    id:2,
-    name:"Apple",
-    image:"./freshfruitsimages/apple royal gala.jpeg",
-    price:379,
+    id:12,
+    name:"Green peas",
+    image:"./vegetablesimage/green peas.jpg",
+    price:150,
 },{
-    id:3,
-    name:"apricots",
-    image:"./freshfruitsimages/Apricots.png",
-    price:259,
+    id:13,
+    name:"Ginger",
+    image:"./vegetablesimage/giner.jpg",
+    price:80,
 
 },{
-    id:4,
-    name:"longonfruit",
-     image:"./freshfruitsimages/longon fruit.jpg",
-     price:355,
+    id:14,
+    name:"JackFruits",
+      image:"./vegetablesimage/jackfruits.jpg",
+     price:70,
 },{
-    id:5,
-    name:"papayasalad",
-      image:"./freshfruitsimages/papaya salad.jpg",
-     price:200,
+    id:15,
+    name:"keerai",
+      image:"./vegetablesimage/keerai.jpg",
+     price:65,
 },{
-       id:6,
-    name:"pineapple",
-      image:"./freshfruitsimages/pineapple.jpg",
-     price:288,
+       id:16,
+    name:"lemon",
+      image:"./vegetablesimage/lemon.jpg",
+     price:195,
 
 },{
-      id:7,
-     name:"pomegranate",
-      image:"./freshfruitsimages/pomegranate salad 1pac.jpg",
-     price:350,
+      id:17,
+     name:"onion",
+      image:"./vegetablesimage/onion.jpg",
+     price:98,
     
 },{
-      id:8,
-     name:"Redpears",
-      image:"./freshfruitsimages/redpears.jpg",
-     price:250,
+      id:18,
+     name:"Ootycarrot",
+      image:"./vegetablesimage/ootycarrot.jpg",
+     price:110,
     
 },{
-        id:9,
-     name:"Guava",
-      image:"./freshfruitsimages/thailand guava.jpg",
-     price:180,
+        id:19,
+     name:"Bitterground",
+      image:"./vegetablesimage/bittergourd.jpg",
+     price:120,
 },{
-    id:10,
-    name:"watermelon",
-      image:"./freshfruitsimages/watermelon.jpg",
-     price:280,
+    id:20,
+    name:"Ivy gourd",
+    image:"./vegetablesimage/ivy gourd.jpeg",
+     price:130,
 }];
 
-
-
-
-// function showProducts() {
-//     let freshfruitscontainer = " ";
-
-//     freshfruitsproducts.forEach(fruits => {
-//         freshfruitscontainer += `
-//         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-//             <div class="card product-card h-100 text-center p-3">
-
-//                 <img src="${fruits.image}" class="card-img-top img-fluid" alt="${fruits.name}">
-
-//                 <div class="card-body">
-//                     <h6>${fruits.name}</h6>
-
-//                     <select class="form-select mb-2">
-//                         <option>1 Pc</option>
-//                     </select>
-
-//                     <p class="fw-bold text-success mb-3">₹ ${fruits.price}</p>
-
-//                     <button class="btn btn-outline-success add-btn">+</button>
-//                 </div>
-
-//             </div>
-//         </div>
-//         `;
-//     });
-
-//     document.getElementById("freshfruitscontainer").innerHTML = freshfruitscontainer;
-// }
-
-//showProducts();
 
 
 function showProducts(products){
@@ -191,7 +157,7 @@ function showProducts(products){
                 <img src="${item.image}" class="img-fluid mb-2" alt="${item.name}">
                 <h6>${item.name}</h6>
                 <select class="form-select my-2">
-                    <option>1 Pc</option>
+                    <option>1 kg</option>
                 </select>
                 <p class="fw-bold text-success">₹ ${item.price}</p>
                 <button onclick="addToCart(${item.id})" class="btn btn-outline-success  addtocartbtn" id="#addtocartbuttn"; onmouseover="onhovering()">Add to Cart</button>
@@ -270,8 +236,21 @@ cart.innerHTML=`Add to Cart`
 
 function updateCartBadge() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
   let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
   document.getElementById("cartCount").innerText = totalQty;
-     document.getElementById("mobilenavbarquantity").innerText = totalQty;
 }
 updateCartBadge()
+
+
+//navbartcartupdate
+function updateCartBadge() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+  document.getElementById("cartCount").innerText = totalQty;
+     document.getElementById("").innerText = totalQty;
+}
+updateCartBadge()
+
+

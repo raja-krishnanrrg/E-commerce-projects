@@ -1,3 +1,6 @@
+function navbarsjs(){
+
+
 let mainBtn = document.querySelector(".main-btn");
 let leftMenu = document.querySelector(".left-menu");
 let rightMenu = document.querySelector(".right-menu");
@@ -34,7 +37,8 @@ subBoxes.forEach(box => box.style.display = "none");
 document.getElementById(target).style.display = "block";
 });
 });
-
+}
+navbarsjs();
 // mobile navbar
 
 function openMenu() {
@@ -277,3 +281,10 @@ cart.innerHTML=`Add to Cart`
 
 // home add to cart over
 
+//navbarcartquantity
+function updateCartBadge() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+  document.getElementById("cartCount").innerHTML = totalQty;
+}
+updateCartBadge()

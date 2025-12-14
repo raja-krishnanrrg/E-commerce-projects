@@ -61,20 +61,65 @@
     border: 1px solid #0aa64f ;
     padding: 20px;
 }
+
+ 
+    .header {
+      background: #57b126;
+      color: #fff;
+      padding: 14px 20px;
+    }
+
+    .empty-cart img {
+      max-width: 180px;
+      width: 100%;
+      opacity: 0.85;
+    }
+
+    .shop-btn {
+      background: #57b126;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .shop-btn:hover {
+      background: #4aa61f;
+      color: #fff;
+    }
+.Emptycart{
+    height: 300px;
+    width: auto;
+}
+a{
+    text-decoration: none;
+    color: #fdfcfc;
+    font-weight: bold;
+}
 </style>
 </head>
 <body>
+
+
+    <div class="header d-flex justify-content-between align-items-center">
+  <div>
+    <i class="bi bi-house"></i><a href="index.html">Home </a> | <strong>Montectio mart</strong>
+  </div>
+  <div>Login <i class="bi bi-box-arrow-in-right"></i></div>
+</div>
 
 <div class="container my-5">
 
     <!-- Header -->
     
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4>Cart <small class="text-muted">(1)</small></h4>
+        <h4>Cart Page</h4>
         <button onclick="clearCart()" class="btn clear-btn btn-sm">Clear</button>
     </div>
 
     <hr>
+            
  <div class="cartasination" id="cartitemquantity">
    <!--- <div class="row g-4">
 
@@ -127,7 +172,7 @@
     </div>
 
     <!-- Continue Shopping -->
-    <div class="text-center mt-4">
+    <div  id="Shopping" class="text-center mt-4">
        <a href="index.html"> <button class="btn clear-btn">Continue Shopping</button></a>
     </div>
 

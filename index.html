@@ -103,43 +103,44 @@ Note: Product availability, prices, and delivery options will vary based on the 
     <!-- LEFT MENU -->
      <div class="overallmenus z-3 position-absolute ">
     <div class="left-menu">
-        <a class="left-item" data-target="snacks">Snacks</a>
-        <a class="left-item" data-target="beverages">Beverages</a>
-        <a class="left-item" data-target="stationery">Stationery</a>
-        <a class="left-item" data-target="oral">Oral Care</a>
-        <a class="left-item" data-target="oral">Oral Care</a>
+        <a class="left-item" data-target="fruits">FreshFruits</a>
+        <a class="left-item" data-target="vegetables">Organic Vegetables</a>
+        <a class="left-item" data-target="cookies">Cookies & Biscuits</a>
+        <a class="left-item" data-target="sweets">Chocholate & Sweets</a>
+
     </div>
     <!-- RIGHT MENU -->
         <div class="right-menu">
-          <div class="sub-box"id="snacks">
-            <a href="#">All Snacks</a>
-            <a href="#">Chips</a>
-            <a href="#">Biscuits</a>
+          <div class="sub-box"id="fruits">
+            <a href="freshfruits.html">All Fruits</a>
+            <a href="#">Seasonal fruits</a>
+            <a href="#">Exotic Fruits</a>
         </div>
 
-        <div class="sub-box" id="beverages">
-            <a href="#">All Beverages</a>
-            <a href="#">Juice</a>
-            <a href="#">Soft Drinks</a>
+        <div class="sub-box" id="vegetables">
+            <a href="vegetables.html">All OrganicVegetables</a>
+            <a href="#">Regular Vegetables</a>
+            <a href="#">Cut & Peeled vegetables</a>
         </div>
 
-        <div class="sub-box" id="stationery">
-            <a href="#">All</a>
-            <a href="#">Pens & Pencils</a>
-            <a href="#">Scissors & Glue</a>
+        <div class="sub-box" id="cookies">
+            <a href="">Biscuits</a>
+            <a href="#">Cream Biscuits</a>
+            <a href="#">Waffer</a>
         </div>
 
-        <div class="sub-box" id="oral">
+         <div class="sub-box" id="sweets">
             <a href="#">Toothpaste</a>
             <a href="#">Brush</a>
             <a href="#">Mouthwash</a>
-        </div>
+        </div> 
         </div>
         <!--addd element here-->
     </div>
 
 </div>
 <!---->
+
 <li  class="nav-item mt-3 hovergreen" >
 <a class="nav-link" aria-current="page" href="#">Home</a>
 </li>
@@ -156,9 +157,9 @@ Note: Product availability, prices, and delivery options will vary based on the 
     </div>
     <div class="d-flex">
     <a href="#" class=" homebutton mt-2 " style="color: black;">Login<i class="bi bi-person-fill" style="color:black;"></i></a>
-<i class='bx  bx-cart carticon ' style='color:black'></i> 
+ <a href="cartpage.html"><i class='bx  bx-cart carticon ' style='color:black'></i> </a>
 </div>
-<span class="quantity ">0</span>
+
 </form>
 </div>
 
@@ -195,8 +196,8 @@ Note: Product availability, prices, and delivery options will vary based on the 
  
   <img class="mobilemarketlogo ms-3" src="./images/marketlogo.jpg" alt="" style="height: 50px; width:70px">
   <div class="mobilequntity d-flex ">
-        <span> <i class='bx  bx-cart carticon mt-2' style='color:#ffff'></i> </span>
-       <span class="quantity mt-1">0</span>
+        <span> <a href="cartpage.html"><i class='bx  bx-cart carticon mt-2' style='color:#ffff'></i> </a></span>
+       
        </div>
        </div>
   <div class="mobileviewsearchbar  ">
@@ -225,16 +226,16 @@ Note: Product availability, prices, and delivery options will vary based on the 
   <div id="mainMenu">
     <h5 class="mb-3">Menu</h5>
     <button class="btn btn-light w-100 text-start mb-2" onclick="openSubMenu()">
-      Category →
+      Category
     </button>
     <button class="btn btn-light w-100 text-start">Offers</button>
     <button class="btn btn-light w-100 text-start mt-2">Orders</button>
   </div>
   <div id="categoryMenu">
     <span class="back-btn" onclick="closeSubMenu()">Back</span>
-    <button class="btn btn-light w-100 text-start mb-2">Mobiles</button>
-    <button class="btn btn-light w-100 text-start mb-2">Grocery</button>
-    <button class="btn btn-light w-100 text-start mb-2">Home Appliances</button>
+    <a href="freshfruits.html"><button class="btn btn-light w-100 text-start mb-2">Fruits</button></a>
+    <a href="vegetables.html"><button class="btn btn-light w-100 text-start mb-2">Vegetables</button></a>
+   <a href="cookies.html"> <button class="btn btn-light w-100 text-start mb-2">Cookies</button></a>
   </div>
 </div>
 
@@ -799,7 +800,7 @@ Note: Product availability, prices, and delivery options will vary based on the 
   </div>
   </footer>
 </div>
-
+<script src="./javascriptfolder/cartpage.js"></script>
 <script src="./javascriptfolder/homepage.js"></script>
 </body>
 </html>

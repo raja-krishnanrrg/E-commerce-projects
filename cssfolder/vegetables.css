@@ -1,0 +1,662 @@
+/*headersection css*/
+*{
+    margin: 0px;
+    padding: 0px;
+    background-position: fixed;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: bold;
+    user-select: none;
+    
+}
+
+.overallbodycontain {
+ background-color: #ffff;
+}
+/*css for drop down delivery options*/
+.overallheadercontainer{
+ 
+
+}
+.deliverycontainer{
+    overflow:hidden; 
+}
+
+.navigationbarforlab{
+ 
+   margin-top: -8px;
+}
+.whatsappcontact{
+    overflow: hidden;
+}
+.phonenum{
+    text-decoration: none;
+     font-weight:bolder;
+    font-style: bold;
+    color: #fff;
+}
+.carticon{
+    font-size: small;
+}
+
+.deliverypicks{
+    background: #0e510b;
+    border: none;
+}
+
+.maindropdown{
+    overflow-y: scroll;
+    height: auto;
+}
+
+#toglebutton{
+    font-weight:bolder;
+    font-style: bold;
+}
+#toglebutton i:hover{
+    color: #04d167;
+}
+
+/*above content of nav bar*/
+.calls{
+    margin-top: -30px;
+    margin-left: 80%;
+    color: aliceblue;
+}
+.homebutton{
+    height: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size:15px;;
+    color: aliceblue;
+}
+.slash{
+        font-size: 20px;
+      color: aliceblue;
+}
+.downarrowicon
+{
+    font-weight:bolder;
+    font-style: bold;
+}
+.mobilemarketlogo{
+    border-radius: 70%;
+}
+
+.mobilewhatsapp{display: none;}
+@media screen and (max-width: 600px)
+ {
+.phonenum{
+    display: none;
+    margin-left: 20%;
+    
+}
+.navigationbarforlab{
+    display:none;
+       overflow-x: hidden;
+}
+.bx-caret-big-down{
+ display: none;
+}
+.calls{
+    margin-right: 30%;
+}
+#glowtext{
+    display: none;
+}
+#topBtn{
+    margin-left: 50px;
+}
+.mobilewhatsapp{
+    display:block;
+}
+
+    .deliverycontainer{
+        overflow: hidden;
+    }
+      .mobileviewsearch {
+        width: 60%;
+     }    
+    .mobilequntity{
+        margin-left:55%;
+    }
+    
+}
+
+.toglebutton {
+    border: none;
+   
+}
+.bx-caret-big-down:hover{
+    color: black;
+}
+/*navbar cart icon */
+.carticon{
+    font-size: 40px;
+}
+.mobilenavbar{
+    background-color: #00a651;
+    margin-top: -8px;
+}
+/*navbar for mobile*/
+#mobileMenu {
+      position: fixed;
+      top: 0;
+      left:-300px;
+      height: 120vh;
+      width: 300px;
+      background: #fff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    #mobileMenu.active {
+      left: 0;
+    }
+   
+    .mobile-searchbutton{
+        background: #4CAF50;
+      border-radius: 50%;
+     padding: 8px;
+      color: white;
+      border: none;
+      font-weight: 600;
+      height: 34px;
+         cursor: pointer;
+      align-items: center;
+      margin-left: -33px;
+      text-align: end;
+        
+    }
+    .mobile-searchbaaring{
+        width: 150px;
+        border-radius:10px;
+        background: #f0f0f0;
+      border-radius: 50px;
+      height: 35px;
+      padding: 0 15px;
+      display: flex;
+      outline: none;
+      align-items: center;
+      
+      
+    }
+    .mobile-searchbaaring:focus{
+     outline: none;
+
+    }
+     .mobile-searchbutton:hover{
+        background-color: #1ea117;
+       
+     }
+    /* Submenu */
+    .categoryMenu {
+      display: none;
+    }
+
+    .back-btn {
+      cursor: pointer;
+      font-weight: bold;
+      padding-bottom: 10px;
+      display: block;
+    }
+
+    .close-btn {
+      font-size: 22px;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+/**/
+.quantity{
+    height: 10px;
+    width: 20px;
+    background-color:red;
+    padding-top: 0px;
+    padding-bottom:24px;
+    padding-left: 6px;
+    padding-right: 5px;
+    border-radius: 50%;
+    margin-left: -17px;
+    margin-top: -2px;
+    color: #fff;
+}
+.hovergreen a{
+        font-weight:bolder;
+    font-style: bold;
+    color: black;
+}
+
+.hovergreen a:hover
+{
+    color: #00a651;
+     font-weight:bolder;
+    font-style: bold;
+}
+.hover-box {
+  display: none;
+  background:#fff ;
+  border: 2px solid #f4f3f3;
+  padding: 15px;
+  width: 300px;
+  height: 600px;
+  position: absolute;
+  left: 265px;   /* distance from dropdown */
+  top: 0;
+  border-radius: 10px;
+  margin-top: 37px;
+  box-shadow: 1px 1px 1px 1px rgb(180, 178, 178);
+}
+.dropdowingitems{
+    height: 600px;
+    overflow-y: scroll;
+    width: 260px;  
+}
+.navigationbarforlab{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px 1px rgb(180, 178, 178);
+    position: fixed;
+    top: 5;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+}
+.homebanners{
+    overflow: hidden;
+    margin-top: -5px;
+}
+/* search bar css*/
+ .search-box {
+      background: #f0f0f0;
+      border-radius: 50px;
+      height: 40px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 700px; /* You can change this */
+      margin: auto;
+      margin-right: 350px;
+    }
+    .search-icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .search-input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      font-size: 15px;
+    }
+    .search-btn {
+      background: #4CAF50;
+      border-radius: 50px;
+      padding: 5px 20px;
+      color: white;
+      border: none;
+      font-weight: 600;
+      height: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .search-btn:hover {
+      background: #43a047;
+    }
+
+    .searchicons{
+        font-size: 30px;
+        margin-top: -15px;
+        font-weight: 100;
+    }
+
+#homesearchbar:focus{
+    border: none;
+  outline: none;
+  box-shadow: none; 
+}
+/*---------------------*/
+
+
+
+/*--------*/
+/*-drop-down-menuites css-*/
+ .dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .main-btn {
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight:bolder;
+         font-style: bold;
+         color: #000;
+    }
+
+     .main-btn:hover
+     {
+        color: #00a651;
+         
+     }
+    /* LEFT MENU */
+    .left-menu {
+        width: 280px;
+        background: #00a651;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        display: none;
+        border-radius: 5px;
+        height: 550px;
+    }
+
+    .left-item {
+        display: block;
+        color: white;
+        padding: 12px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .left-item:hover {
+        background: #ff3030;
+        border-radius: 5px;
+       
+    }
+
+    /* RIGHT MENU */
+    .right-menu {
+        width: 260px;
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 45px;
+        left: 230px;
+        display: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        height: 550px;
+        margin-left: 50px;
+    }
+
+    .sub-box {
+        display: none;
+    }
+
+    .sub-box a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .sub-box a:hover {
+       background-color: red;
+       border-radius: 5px;
+       color: #f4f3f3;
+    }
+    .overallmenus{
+        margin-top: -45px;
+    } 
+
+
+/* WhatsApp chats css floating button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 90px;        /* Distance from bottom */
+    right: 20px;         /* Distance from right */
+    background: white;
+    border: 2px solid #25D366;
+    border-radius: 40px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.whatsapp-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Hover effect */
+.whatsapp-btn:hover {
+    background: #25D366;
+    color: #fff;
+}
+
+.whatsapp-btn:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Scroll to top button */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 2px solid #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* Hide initially */
+#topBtn {
+    display: none;
+}
+#topBtn:hover{
+    background-color: #00a651;
+    color: #fff;
+}
+/*header section is over*/
+
+
+
+
+/*addto cart section*/
+
+.product-card{
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+.product-card:hover{
+    transform: translateY(-10px);
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+}
+.product-card img{
+    height:200px;
+    object-fit:contain;
+}
+.add-btn{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+@media(max-width:576px){
+    .add-btn{
+        width:100%;
+        border-radius:8px;
+    }
+}
+.section-1{
+    margin-top:8%;
+    width: 100%;
+    height:auto;
+}
+
+#addtocartbutttn{
+    background-color: #01f60d;
+    border: none;
+    color: black;
+}
+
+#addtocartbuttn:hover{
+    background-color: #8ff303;
+    border: none;
+    color: #000;
+    padding: 5px;
+}
+
+
+
+/*footersection*/
+
+.categories a:hover{
+    color: #11fd04;
+        
+    font-style: bold;
+}
+.social-media a:hover{
+    background-color: #04d167;
+
+}
+   
+
+    /* Footer base */
+    .site-footer{
+      background: var(--arthi-bg);
+      color: #1a1a1a;
+      padding-top: 48px;
+      padding-bottom: 36px;
+      border-top: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .site-footer a { color: inherit; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* Logo & address */
+    .footer-logo img { max-width: 140px; height: auto; display:block; }
+
+    /* Need Help block */
+    .help-block .phone {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      font-weight:600;
+      font-size:1.05rem;
+      color: #0f5132;
+    }
+    .help-block .email {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      color: var(--muted);
+      margin-top:14px;
+    }
+    .help-divider{
+      height:1px;
+      background: rgba(0,0,0,0.06);
+      margin: 18px 0;
+    }
+
+    /* Categories column - make items wrap */
+    .categories a { margin-right: .5rem; margin-bottom: .25rem; white-space: nowrap; color: var(--muted); font-size:.95rem; }
+
+    /* bottom row */
+    .footer-bottom { padding-top: 18px; padding-bottom: 6px; border-top: 1px solid rgba(0,0,0,0.04); margin-top: 20px; }
+
+    .social-btn { width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+
+    /* WhatsApp floating button */
+    .whatsapp-fab{
+      position: fixed;
+      right: 18px;
+      bottom: 86px;
+      z-index: 1100;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      background: #fff;
+      padding: 8px 12px;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border: 2px solid #1f9a4b;
+      align-items:center;
+      font-weight:600;
+      color: #1f9a4b;
+    }
+    .whatsapp-fab .wa-icon{
+      background: #1f9a4b;
+      color: white;
+      width:36px;
+      height:36px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      font-size:1.1rem;
+    }
+
+    /* Scroll-top circle */
+    .scroll-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background: white;
+      border: 2px solid #1f9a4b;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      z-index: 1100;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767.98px) {
+      .site-footer 
+      { padding-top: 28px;
+        
+        padding-bottom: 28px; 
+    }
+      .categories {
+         margin-top: 10px; 
+        }
+      .whatsapp-fab { 
+        right: 12px; 
+        bottom: 92px;
+         padding: 6px 10px; 
+    }
+    }
+#arrowscroll{
+    display: none;
+}
+    .footersection{
+         background-color:#f6f3dc;
+    }
+
+    .market-logo{
+        border-radius: 70%;
+        border: 1px solid black;
+       
+    }
+    /**/
+    /*responsive the over flow*/
+
+
+/*footer section*/

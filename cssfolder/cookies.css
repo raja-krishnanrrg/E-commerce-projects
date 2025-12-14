@@ -1,20 +1,29 @@
+/*headersection css*/
 *{
     margin: 0px;
     padding: 0px;
     background-position: fixed;
-    font-family: 'Poppins', sans-serif;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: bold;
     user-select: none;
+    
+}
+
+.overallbodycontain {
+ background-color: #ffff;
 }
 /*css for drop down delivery options*/
 .overallheadercontainer{
-   overflow:hidden;
+ 
+
 }
 .deliverycontainer{
     overflow:hidden; 
 }
 
 .navigationbarforlab{
-    z-index: 2;
+ 
+   margin-top: -8px;
 }
 .whatsappcontact{
     overflow: hidden;
@@ -25,14 +34,10 @@
     font-style: bold;
     color: #fff;
 }
-.deliverycontainer{
-    background-color:#1ea117 ;
-    height: 35px;
-    width: auto;
-    font-family: Arial, Helvetica, sans-serif;
-       font-weight:bolder;
-    font-style: bold;
+.carticon{
+    font-size: small;
 }
+
 .deliverypicks{
     background: #0e510b;
     border: none;
@@ -43,6 +48,13 @@
     height: auto;
 }
 
+#toglebutton{
+    font-weight:bolder;
+    font-style: bold;
+}
+#toglebutton i:hover{
+    color: #04d167;
+}
 
 /*above content of nav bar*/
 .calls{
@@ -98,15 +110,17 @@
 .mobilewhatsapp{
     display:block;
 }
- .navigationbarforlab{
-        
-    }
+
     .deliverycontainer{
         overflow: hidden;
     }
       .mobileviewsearch {
         width: 60%;
-     } 
+     }    
+    .mobilequntity{
+        margin-left:55%;
+    }
+    
 }
 
 .toglebutton {
@@ -122,11 +136,9 @@
 }
 .mobilenavbar{
     background-color: #00a651;
+    margin-top: -8px;
 }
 /*navbar for mobile*/
-.mobilequntity{
-    margin-left: 55%;
-}
 #mobileMenu {
       position: fixed;
       top: 0;
@@ -254,6 +266,7 @@
 }
 .homebanners{
     overflow: hidden;
+    margin-top: -5px;
 }
 /* search bar css*/
  .search-box {
@@ -307,50 +320,7 @@
   box-shadow: none; 
 }
 /*---------------------*/
-/*Every day wonders*/
 
-#glowtext{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        font-size: 20px;
-                overflow: hidden;
-}
-#snackscontent{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        font-size: 20px;
-                overflow: hidden;
-}
-#Nutritioustext{
-    display: none;
-    font-weight:bolder;
-    font-style: bold;
-    text-shadow: 1px 1px 20px #11fd04;
-    font-size: 20px;
-            overflow: hidden;
-}
-#divinetext{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        overflow: hidden;
-        font-size: 20px;
-}
-
-#fabrictext{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        overflow: hidden;
-        font-size: 20px;
-}
- 
 
 
 /*--------*/
@@ -500,12 +470,56 @@
     background-color: #00a651;
     color: #fff;
 }
+/*header section is over*/
 
 
 
 
+/*addto cart section*/
 
-        /*--banner button css --*/
+.product-card{
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+.product-card:hover{
+    transform: translateY(-10px);
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+}
+.product-card img{
+    height:200px;
+    object-fit:contain;
+}
+.add-btn{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+@media(max-width:576px){
+    .add-btn{
+        width:100%;
+        border-radius:8px;
+    }
+}
+.section-1{
+    margin-top:8%;
+    width: 100%;
+    height:auto;
+}
+
+#addtocartbutttn{
+    background-color: #01f60d;
+    border: none;
+    color: black;
+}
+
+#addtocartbuttn:hover{
+    background-color: #8ff303;
+    border: none;
+    color: #000;
+    padding: 5px;
+}
+
 
 
 /*footersection*/
@@ -641,4 +655,8 @@
         border: 1px solid black;
        
     }
-    /* footer section over */
+    /**/
+    /*responsive the over flow*/
+
+
+/*footer section*/
