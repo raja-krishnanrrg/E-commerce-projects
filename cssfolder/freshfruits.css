@@ -20,7 +20,7 @@
 }
 
 .navigationbarforlab{
-   z-index: 2;
+ 
    margin-top: -8px;
 }
 .whatsappcontact{
@@ -468,416 +468,74 @@
     background-color: #00a651;
     color: #fff;
 }
-
-                                /* header close section */
-    /*------*/
-        /*--banner button css --*/
-.bannerbtn{
-        height: 10px;
-        width: 15px;
-        background-color: #04d167;
-        border-radius: 50%;
-}
-
-.labanner {
-padding-top: 30px;
-}
+/*header section is over*/
 
 
 
-/**/
-/*Every day wonders*/
 
-#glowtext{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        font-size: 20px;
-                overflow: hidden;
-}
-#snackscontent{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        font-size: 20px;
-                overflow: hidden;
-}
-#Nutritioustext{
-    display: none;
-    font-weight:bolder;
-    font-style: bold;
-    text-shadow: 1px 1px 20px #11fd04;
-    font-size: 20px;
-            overflow: hidden;
-}
-#divinetext{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        overflow: hidden;
-        font-size: 20px;
-}
 
-#fabrictext{
-        display: none;
-        font-weight:bolder;
-        font-style: bold;
-        text-shadow: 1px 1px 20px #11fd04;
-        overflow: hidden;
-        font-size: 20px;
-}
- 
-/**/
-/*---body content-1---*/
-.everydaywondersscrollmobileview{
-    overflow: hidden;
-}
 
-.homebanners{
-    overflow:hidden;
+
+
+
+/*addto cart section*/
+.product-card{
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
-.containeverydaywonders{
-    overflow: hidden;
+.product-card img{
+    height:200px;
+    object-fit:contain;
 }
-.containforcateoryshop{
-    overflow: hidden;
+.add-btn{
+    width:45px;
+    height:45px;
+    border-radius:50%;
 }
-.bodycontent-3{
-    overflow: hidden;
+@media(max-width:576px){
+    .add-btn{
+        width:100%;
+        border-radius:8px;
+    }
 }
-.trustedgrocery{
-    overflow: hidden;
-}
-.carthomecontainerr{
-    overflow: hidden;
-}
-.bodycontent-1{
+.section-1{
+    margin-top:8%;
     width: 100%;
-    height:75lvh;
-    background-image: url(./images/background\ images.jpg);
-   background-repeat: no-repeat;
-    overflow-x: hidden;
-    background-size: cover;
-}
-
-/*--daily needs--*/
-.image247{
- background-image: url(./images/background\ images.jpg);
-   background-repeat: no-repeat;
-    overflow-x: hidden;
-    background-size: cover;
-}
-#Freshenerstext{
-display: none;
-font-weight:bolder;
-font-style: bold;
-text-shadow: 1px 1px 20px #11fd04;
-overflow: hidden;
-font-size: 20px;
-}
-#oralproductext{
-    display: none;
-font-weight:bolder;
-font-style: bold;
-text-shadow: 1px 1px 20px #11fd04;
-overflow: hidden;
-font-size: 20px;
-
-}
-#weternmaniatext{
-    display: none;
-font-weight:bolder;
-font-style: bold;
-text-shadow: 1px 1px 20px #11fd04;
-overflow: hidden;
-font-size: 20px;
-
-}
-#bathtext{
-    display: none;
-font-weight:bolder;
-font-style: bold;
-text-shadow: 1px 1px 20px #11fd04;
-overflow: hidden;
-font-size: 20px;
-
-}
-#soothingtext{
-    display: none;
-font-weight:bolder;
-font-style: bold;
-text-shadow: 1px 1px 20px #11fd04;
-overflow: hidden;
-font-size: 20px;
-
-}
-
-/*--*/
-.wonders{
-      font-weight:bolder;
-         font-style: bold;
-         font-size: 3rem;
-}   
-@media screen and (max-width: 600px)
- {
-    .wonders
-    {
-        font-size: 2rem;
-        text-align: center;
-    }
-   .marginright{
-    margin-left: 0%;
- }
-.categorytag{
-        font-size: 2rem;
-        text-align: center;
-    }
-    .containeverydaywonders{
-        display: none;
-    }
-.containforcateoryshop{
-    margin-top: 100px;
-}
- .bodycontent-3{
-    display: none;
- } 
-
-    
-}
- 
-.category-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: auto;
-}
-.category-item img:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-}
-.category-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 10px;
-    display: none;   
-}
-.marginright{
-    margin-left: -80px;
-}
- .card {
-    border: none;
-    transition: 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-  .categoryshop{
-    width: 100%;
-    height: auto;
-    background-color:#f6f3dc;
-    background-size: cover;
-    border-radius: 5px;
-     overflow-x: hidden;
-  }
-  .containforcateoryshop{
-                background-image: url(./images/background\ images.jpg);
-               height:auto;
-               overflow-x: hidden;
-               background-size: contain;
-               margin-top: -18%;
-  }
-  .categorytag{
-     font-weight:bolder;
-         font-style: bold;
-         font-size: 3rem;
-  }
-  /*24*7 images*/
-.image247{
-    padding-top: 60px;      
-}
-.evrydayoverflow{
-    overflow: hidden;
-}
-
-.everydaywondersscrollmobileview{
-      background-image:url(./images/background\ images.jpg);
-       height:100%;
-         background-repeat: no-repeat;
-         width:70%;
-         background-size: cover;
-         text-align: center;
-}
-.overflowtext{
-      font-weight:bolder;
-         font-style: bold;
-         font-size: 20px;
-
-}
-.bodycontent-3
-{
-        background-image:url(./images/background\ images.jpg);
-        height:50vh;
-          overflow-x: hidden;
-         background-repeat: no-repeat;
-         width: 100%;
-         background-size: cover;
-}
-
-.categorry{
-    overflow: hidden;
-}
-
-.trustedgrocery
-{
-        background-image:url(./images/background\ images.jpg);
-        height: auto;
-         overflow-x: hidden;
-         background-repeat: no-repeat;
-         width: 100%;
-         background-size: cover;
-         padding: 60px;
-}
-.sliding {
-        width: 40px;
-        height: 40px;
-        background: #fff;
-        border-radius: 50%;
-        border: 1px solid #ccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 45%;
-        cursor: pointer;
-        z-index: 10;
-    }
-    .left-slide {
-        left: 10px;
-        margin-top: 130px;
-        z-index: 2;
-    }
-    .right-slide {
-        right: 10px;
-          margin-top: 130px;
-        z-index: 2;
-        cursor: pointer;
-    }
-     .right-slide:hover{
-        background-color: #04d167;
-     }
-
-
-
-     /**/
-
-
-
-     /**/
-
-
-/*homepageaddtocart*/
-    .slider-container {
-        position: relative;
-        overflow: hidden;
-    }
-    .product-slider {
-        display: flex;
-        gap: 20px;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        padding-bottom: 10px;
-    }
-    .product-slider::-webkit-scrollbar {
-        display: none;
-    }
-    .arrow {
-        width: 40px;
-        height: 40px;
-        background: #fff;
-        border-radius: 50%;
-        border: 1px solid #ccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 45%;
-        cursor: pointer;
-        
-    }
-    .arrow-left {
-        left: 10px;
-    }
-    .arrow-right {
-        right: 10px;
-    }
-    .product-box {
-        width: 260px;
-        border-radius: 10px;
-        border: 1px solid #eee;
-        padding: 15px;
-        background: #fff;
-    }
-    .product-box .addtocart{
-       background-color: #3bee04;
-      color:#000;
-    }
-    .product-box .addtocart:hover{
-       background-color: #a8e804;
-    }
-    .bi-cart-plus{
-      font-weight: 600;
-      font-size:17px;
-      
-    }
-.carthomecontainerr
-{
-         background-image:url(./images/background\ images.jpg);
-        height:auto;
-         overflow-x: hidden;
-         background-repeat: no-repeat;
-         width: 100%;
-         background-size: cover;
-         padding: 70px;
-}
-
-.catbuttons{
-        font-weight:bolder;
-    font-style: bold;
-    color: black;
    
+    height:auto;
 }
-.catbuttons{
-    height: 40px;
-    width: 150px;
-    background-color: #11fd04;
-    border-radius: 10px;
-}
-.catbuttons:hover{
-    background-color: #a8e804;
-}
-.homepageaddtocart{
-    background-color:#f6f3dc;
-    height: auto;
-}
-/*---*/
 
-/*smart shoppy*/
-.smartshoppy{
-    padding: 30px;
-     background-image:url(./images/background\ images.jpg);
-        height:auto;
-         overflow-x: hidden;
-         background-repeat: no-repeat;
-         width: 100%;
-         background-size: cover;
-         
+#addtocartbtn:hover{
+    background-color: #75d104;
+    border: none;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footersection*/
@@ -1018,5 +676,3 @@ font-size: 20px;
 
 
 /*footer section*/
-
-

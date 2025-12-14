@@ -259,6 +259,7 @@ loadProducts(btn.dataset.cat);
 // SLIDER ARROWS
 document.querySelector(".arrow-left").onclick = () => slider.scrollLeft -= 300;
 document.querySelector(".arrow-right").onclick = () => slider.scrollLeft += 300;
+
 function onhovering(){
 let addtocart=document.querySelectorAll(".addtocart");
 addtocart.forEach(cart=>{

@@ -52,6 +52,55 @@
         cursor:pointer;
         font-size:18px;
     }
+
+
+   .cart-item{
+    border:1px solid #e5e5e5;
+    border-radius:6px;
+    padding:15px;
+}
+.qty-btn{
+    width:35px;
+    height:35px;
+    border-radius:5px;
+    border:none;
+    background:#0aa64f;
+    color:#fff;
+    font-size:18px;
+}
+.qty-input{
+    width:40px;
+    text-align:center;
+    border:none;
+    font-weight:600;
+}
+.price-old{
+    text-decoration:line-through;
+    color:#aaa;
+    font-size:14px;
+}
+.summary-card{
+    border:1px solid #e5e5e5;
+    border-radius:6px;
+    padding:20px;
+}
+.checkout-btn{
+    background:#0aa64f;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+}
+.checkout-btn:hover{
+    background:#099046;
+}
+.clear-btn{
+    border:1px solid #0aa64f;
+    color:#0aa64f;
+}
+.clear-btn:hover{
+    background:#0aa64f;
+    color:#fff;
+}
 </style>
 
 </head>
@@ -90,7 +139,7 @@
                     <img src="${p.img}">
                     <h3>${p.name}</h3>
                     <p>₹${p.price}</p>
-                    <button onclick="addToCart(${p.id})">Add to Cart</button>
+                    <button onclick="addToCart(${p.id})" id="addtocartbtn">Add to Cart</button>
                 </div>
             `;
         });
@@ -126,23 +175,72 @@
         } else {
             cart.forEach(item => {
                 html += `
-                    <div class="cart-item">
-                        <div>
-                            <h4>${item.name}</h4>
-                            <p>₹${item.price}</p>
-                        </div>
-                        <div>
-                            <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
-                            <span> ${item.qty} </span>
-                            <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
-                        </div>
-                    </div>
+                   <div class="cartasination">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Cart <small class="text-muted">(${cart.length})</small></h4>
+        <button class="btn clear-btn btn-sm">Clear</button>
+    </div>
+
+    <hr>
+
+    <div class="row g-4">
+
+        <!-- Cart Item -->
+        <div class="col-lg-8">
+            <div class="cart-item d-flex flex-column flex-md-row align-items-center gap-3">
+                
+                <img src="${item.img}" width="80" alt="product">
+
+                <div class="flex-grow-1">
+                    <h6 class="mb-1">${item.name}</h6>
+                    <small class="text-muted">100 gm</small>
+                </div>
+
+                <div class="text-center">
+                    <div class="fw-bold">₹${item.price}</div>
+                    <div class="price-old">₹449</div>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <button class="qty-btn" onclick="decreaseqnty()">−</button>
+                    <input type="text" id="qty" class="qty-input" value="${item.qty}" readonly>
+                    <button id="quantityincrease" class="qty-btn" onclick="update()">+</button>
+                </div>
+
+                <div class="fw-bold">₹ <span id="totalPrice">${item.price}</span></div>
+            </div>
+        </div>
+
                 `;
+                console.log(item)
+         
+                
+
+                
             });
         }
 
         document.getElementById("cart").innerHTML = html;
+
+
+    
     }
+
+    console.log(cart)
+         function update(){
+    let updateqnty=cart[0].qty+=1;
+    document.getElementById("qty").value=updateqnty;
+       
+        
+    }
+
+         function decreaseqnty(){
+    let updateqnty=cart[0].qty-=1;
+    document.getElementById("qty").value=updateqnty;
+       
+        
+    }
+
 
     // ==========================
     // 5. Increase / Decrease Qty
@@ -158,6 +256,23 @@
 
         updateCart();
     }
+
+  
+   
+    
+
+
+// cart quantity update
+//let qty = 1;
+//let price = 114;
+
+//function changeQty(val){
+  //  qty += val;
+    //if(qty < 1) qty = 1;
+    //document.getElementById("qty").value = qty;
+   // document.getElementById("totalPrice").innerText = (qty * price).toFixed(2);
+    //document.getElementById("summaryTotal").innerText = (qty * price).toFixed(2);
+//}
 </script>
 
 </body>
