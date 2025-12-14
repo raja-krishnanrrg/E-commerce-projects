@@ -131,7 +131,7 @@
     // ==========================
     // 2. Show Products
     // ==========================
-    function showProducts(){
+   function showProducts(){
         let html = "";
         products.forEach(p => {
             html += `
@@ -167,85 +167,70 @@
     // ==========================
     // 4. Update Cart
     // ==========================
-    function updateCart(){
-        let html = "";
+   function updateCart() {
+    let html = "";
 
-        if(cart.length === 0){
-            html = "<p>Your cart is empty</p>";
-        } else {
-            cart.forEach(item => {
-                html += `
-                   <div class="cartasination">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4>Cart <small class="text-muted">(${cart.length})</small></h4>
-        <button class="btn clear-btn btn-sm">Clear</button>
-    </div>
-
-    <hr>
-
-    <div class="row g-4">
-
-        <!-- Cart Item -->
-        <div class="col-lg-8">
-            <div class="cart-item d-flex flex-column flex-md-row align-items-center gap-3">
-                
-                <img src="${item.img}" width="80" alt="product">
-
-                <div class="flex-grow-1">
-                    <h6 class="mb-1">${item.name}</h6>
-                    <small class="text-muted">100 gm</small>
+    if (cart.length === 0) {
+        html = "<p>Your cart is empty</p>";
+    } else {
+        cart.forEach((item, index) => {
+            html += `
+            <div class="cartasination mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4>Cart <small class="text-muted">(${cart.length})</small></h4>
+                    <button class="btn clear-btn btn-sm">Clear</button>
                 </div>
 
-                <div class="text-center">
-                    <div class="fw-bold">₹${item.price}</div>
-                    <div class="price-old">₹449</div>
-                </div>
+                <hr>
 
-                <div class="d-flex align-items-center gap-2">
-                    <button class="qty-btn" onclick="decreaseqnty()">−</button>
-                    <input type="text" id="qty" class="qty-input" value="${item.qty}" readonly>
-                    <button id="quantityincrease" class="qty-btn" onclick="update()">+</button>
-                </div>
+                <div class="cart-item d-flex flex-column flex-md-row align-items-center gap-3">
+                    
+                    <img src="${item.img}" width="80" alt="product">
 
-                <div class="fw-bold">₹ <span id="totalPrice">${item.price}</span></div>
+                    <div class="flex-grow-1">
+                        <h6 class="mb-1">${item.name}</h6>
+                        <small class="text-muted">100 gm</small>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="fw-bold">₹${item.price}</div>
+                        <div class="price-old">₹449</div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="qty-btn" onclick="decreaseQty(${index})">−</button>
+                        <span class="fw-bold">${item.qty}</span>
+                        <button class="qty-btn" onclick="increaseQty(${index})">+</button>
+                    </div>
+
+                    <div class="fw-bold">₹ ${item.price * item.qty}</div>
+                </div>
             </div>
-        </div>
-
-                `;
-                console.log(item)
-         
-                
-
-                
-            });
-        }
-
-        document.getElementById("cart").innerHTML = html;
-
-
-    
+            `;
+        });
     }
 
-    console.log(cart)
-         function update(){
-    let updateqnty=cart[0].qty+=1;
-    document.getElementById("qty").value=updateqnty;
-       
-        
-    }
-
-         function decreaseqnty(){
-    let updateqnty=cart[0].qty-=1;
-    document.getElementById("qty").value=updateqnty;
-       
-        
-    }
+    document.getElementById("cart").innerHTML = html;
+}
 
 
+function increaseQty(index) {
+  cart[index].qty++;
+  updateCart();
+}
+
+function decreaseQty(index) {
+  if (cart[index].qty > 1) {
+    cart[index].qty--;
+    updateCart();
+  }
+}
+
+updateCart();
     // ==========================
     // 5. Increase / Decrease Qty
     // ==========================
-    function changeQty(id, change){
+  /* function changeQty(id, change){
         let item = cart.find(c => c.id === id);
 
         item.qty += change;
@@ -255,24 +240,9 @@
         }
 
         updateCart();
-    }
-
-  
-   
+    } */
+   updateCart();
     
-
-
-// cart quantity update
-//let qty = 1;
-//let price = 114;
-
-//function changeQty(val){
-  //  qty += val;
-    //if(qty < 1) qty = 1;
-    //document.getElementById("qty").value = qty;
-   // document.getElementById("totalPrice").innerText = (qty * price).toFixed(2);
-    //document.getElementById("summaryTotal").innerText = (qty * price).toFixed(2);
-//}
 </script>
 
 </body>

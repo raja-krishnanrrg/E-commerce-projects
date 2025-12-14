@@ -57,6 +57,10 @@
     background:#0aa64f;
     color:#fff;
 }
+.cartasination{
+    border: 1px solid #0aa64f ;
+    padding: 20px;
+}
 </style>
 </head>
 <body>
@@ -64,17 +68,17 @@
 <div class="container my-5">
 
     <!-- Header -->
-     <div class="cartasination">
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    
+      <div class="d-flex justify-content-between align-items-center mb-3">
         <h4>Cart <small class="text-muted">(1)</small></h4>
-        <button class="btn clear-btn btn-sm">Clear</button>
+        <button onclick="clearCart()" class="btn clear-btn btn-sm">Clear</button>
     </div>
 
     <hr>
+ <div class="cartasination" id="cartitemquantity">
+   <!--- <div class="row g-4">
 
-    <div class="row g-4">
-
-        <!-- Cart Item -->
+        
         <div class="col-lg-8">
             <div class="cart-item d-flex flex-column flex-md-row align-items-center gap-3">
                 
@@ -99,9 +103,10 @@
                 <div class="fw-bold">₹ <span id="totalPrice">114.00</span></div>
             </div>
         </div>
+</div> 
+ -->
 
-        <!-- Summary -->
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
             <div class="summary-card">
                 <div class="d-flex justify-content-between">
                     <h5>Total</h5>
@@ -117,21 +122,21 @@
 
                 <button class="btn checkout-btn w-100 mt-3">Check Out</button>
             </div>
-        </div>
-
+        </div> -->
+</div>
     </div>
 
     <!-- Continue Shopping -->
     <div class="text-center mt-4">
-        <button class="btn clear-btn">Continue Shopping</button>
+       <a href="index.html"> <button class="btn clear-btn">Continue Shopping</button></a>
     </div>
-</div>
-</div>
+
+
 
 <!-- JS -->
-<script src="./javascriptfolder/cartpage.js">
+<script src="./javascriptfolder/cartpage.js"></script>
+<script src="./javascriptfolder/freshfruits.js"></script>
 
-</script>
 
 </body>
 </html>

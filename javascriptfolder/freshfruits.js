@@ -1,9 +1,14 @@
+function navbarsjs(){
+
+
+
+
 let mainBtn = document.querySelector(".main-btn");
 let leftMenu = document.querySelector(".left-menu");
 let rightMenu = document.querySelector(".right-menu");
 let leftItems = document.querySelectorAll(".left-item");
 let subBoxes = document.querySelectorAll(".sub-box"); 
-mainBtn.addEventListener("mouseenter", () => {
+mainBtn.addEventListener("mouseenter",() => {
 leftMenu.style.display = "block";
 });
 // When hover left menu
@@ -34,6 +39,10 @@ subBoxes.forEach(box => box.style.display = "none");
 document.getElementById(target).style.display = "block";
 });
 });
+
+
+}
+navbarsjs();
 
 // mobile navbar
 
@@ -176,15 +185,17 @@ const freshfruitsproducts=[{
 
 
 function showProducts(products){
-    let html = "";
+    let fruitscontain = "";
 
     if(products.length === 0){
-        html = `<h5 class="text-center text-danger">No products found</h5>`;
+        fruitscontain = `<h5 class="text-center text-danger">No products found</h5>`;
     }
 
     products.forEach(item => {
-        html += `
+        fruitscontain += `
+            
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        
             <div class="card product-card text-center p-3 h-100">
                 <img src="${item.image}" class="img-fluid mb-2" alt="${item.name}">
                 <h6>${item.name}</h6>
@@ -192,12 +203,15 @@ function showProducts(products){
                     <option>1 Pc</option>
                 </select>
                 <p class="fw-bold text-success">₹ ${item.price}</p>
-                <button class="btn btn-outline-success  addtocartbtn"id="addtocartbtn" onmouseover="onhovering()" >Add to Cart</button>
+                <button onclick="addToCart(${item.id})" class="btn btn-outline-success  addtocartbtn" id="#addtocartbuttn"; onmouseover="onhovering()"   >Add to Cart</button>
             </div>
-        </div>`;
+    
+        </div>`
+        
+        ;
     });
 
-    document.getElementById("freshfruitscontainer").innerHTML = html;
+    document.getElementById("freshfruitscontainer").innerHTML = fruitscontain;
 }
 
 // load all products initially
@@ -223,8 +237,6 @@ function mobilesearchproducts(){
 }
 
 
-
-
 function onhovering(){
 let addtocart=document.querySelectorAll(".addtocartbtn");
 addtocart.forEach(cart=>{
@@ -239,3 +251,25 @@ cart.innerHTML=`Add to Cart`
 })
 
 };
+
+
+//add to cart process
+
+
+ function addToCart(id){
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let item = freshfruitsproducts.find(p => p.id === id);
+
+        let exist = cart.find(c => c.id === id);
+
+        if(exist){
+            exist.qty++;
+        }else{
+            cart.push({ ...item, qty: 1 });
+        }
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert("Added to cart ✅")
+        
+    }
+//   
