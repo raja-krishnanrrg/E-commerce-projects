@@ -259,8 +259,7 @@ cart.innerHTML=`Add to Cart`
         }else{
             cart.push({ ...item, qty: 1 });
         }
-          localStorage.setItem("cart", JSON.stringify(cart));
-          
+          localStorage.setItem("cart", JSON.stringify(cart));      
         
     }
 //   

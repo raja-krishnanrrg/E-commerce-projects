@@ -22,7 +22,6 @@ function updateCart() {
 </div>`;
 document.getElementById("Shopping").style.display="none";
     }
-
     cart.forEach((item, index) => {
         html += `
     <div class="row g-4 ">
